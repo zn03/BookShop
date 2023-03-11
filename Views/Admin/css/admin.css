@@ -1,0 +1,163 @@
+body {
+    background: #f1f4f7;
+    padding-top: 50px;
+    color: #5f6468;
+}
+
+p {
+    color: #777;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #30a5ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #5f6468;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+h3,
+h4 {
+    font-weight: 300;
+}
+
+.large {
+    font-size: 2em;
+}
+
+.text-muted {
+    color: #9fadbb;
+}
+
+
+/* .sidebar {
+    display: block;
+    background-color: rgb(149, 179, 166);
+    padding: 0;
+    display: none;
+} */
+
+.sidebar form {
+    padding: 20px 15px 5px 15px;
+    border-bottom: 1px solid rgb(231, 231, 236);
+    margin-bottom: 20px;
+}
+
+.sidebar ul.nav a:hover,
+.sidebar ul.nav li.parent ul li a:hover {
+    text-decoration: none;
+    background-color: #e9ecf2;
+}
+
+.sidebar ul.nav .active a,
+.sidebar ul.nav li.parent a.active,
+.sidebar ul.nav .active>a:hover,
+.sidebar ul.nav li.parent a.active:hover,
+.sidebar ul.nav .active>a:focus,
+.sidebar ul.nav li.parent a.active:focus {
+    color: #fff;
+    background-color: #30a5ff;
+}
+
+.sidebar ul.nav ul,
+.sidebar ul.nav ul li {
+    list-style: none;
+    list-style-type: none;
+}
+
+.sidebar ul.nav ul.children {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+}
+
+.sidebar ul.nav ul.children li a {
+    height: 40px;
+    background: #f9f9f9;
+    color: #30a5ff!important;
+}
+
+.sidebar ul.nav li.current a {
+    background-color: #919ea8;
+    color: #fff!important;
+}
+
+.sidebar ul.nav li.parent ul li a {
+    border: none;
+    display: block;
+    padding-left: 30px;
+    line-height: 40px;
+}
+
+.sidebar span.glyphicon {
+    margin-right: 10px;
+}
+
+.sidebar ul.nav li.divider {
+    border-bottom: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.sidebar .attribution {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+}
+
+.navbar {
+    border: 0;
+}
+
+.navbar input {
+    border: 0;
+    background: #444;
+    color: #fff;
+}
+
+.navbar input:focus {
+    color: #fff;
+    background: #555;
+    border: 1px solid #30a5ff;
+    outline: 0;
+    box-shadow: inset 0px 0px 0px 1px #30a5ff;
+}
+
+.user-menu {
+    display: inline-block;
+    margin-top: 14px;
+    margin-right: 10px;
+    float: right;
+    list-style: none;
+    padding: 0;
+}
+
+.user-menu a {
+    color: #fff;
+}
+
+.user-menu a:hover,
+.user-menu a:focus {
+    text-decoration: none;
+}
