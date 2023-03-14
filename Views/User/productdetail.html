@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product detail</title>
+    <link rel="stylesheet" href="css/productdetail.css">
+    <link rel="stylesheet" href="js/contact.js">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="image/thiet-ke-logo-nha-sach-book-pink.png " width="175px" class="logo-img" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12"><img src="image/gop-y-vn.png" width="350px" alt="text"></div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <!-- <div class="search-wrapper">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div id="mainnav">
+            <div class="wrapper">
+                <ul class="menu clearfix" list-style-type="none">
+                    <li>
+                        <a href="">Danh mục sách</a>
+                        <ul class="submenu">
+                            <li><a href="">Văn học Việt Nam</a>
+                                <ul class="submenu2">
+                                    <li><a href="">Tiểu thuyết</a></li>
+                                    <li><a href="">Truyện ngắn</a></li>
+                                    <li><a href="">Thơ / Kịch</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Văn học Nước Ngoài</a>
+                                <ul class="submenu2">
+                                    <li><a href=""> Đương đại</a></li>
+                                    <li><a href="">Lãng mạn</a></li>
+                                    <li><a href="">Trinh thám / Kinh dị</a></li>
+                                    <li><a href="">Thơ / Kịch</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Thiếu nhi</a>
+                                <ul class="submenu2">
+                                    <li><a href="">Tuổi teen</a></li>
+                                    <li><a href="">Truyện tranh</a></li>
+                                    <li><a href="">Thiếu nhi</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Khoa học tự nhiên - Nhân văn</a>
+                                <ul class="submenu2">
+                                    <li><a href="">Lịch sử</a></li>
+                                    <li><a href="">Triết học</a></li>
+                                    <li><a href="">Kinh tế</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Sách bán chạy</a></li>
+                    <li class="show-mobile"><a href="">Giới thiệu</a></li>
+
+                    <li class="show-mobile"><a href="">Liên Hệ</a></li>
+
+                    <li class="show-mobile"><a href="">Giỏ hàng</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="product-item">
+            <div class="card mb-3" style="max-width: 150ch; margin: auto;max-height: 600ch;">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" class="rounded-start" alt="...">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-body ml-4">
+                            <h4 class="card-title">LEN CHÙI - SILO THÁP GIỐNG</h4>
+                            <p class="card-text">Mã sản phẩm:</p>
+                            <p class="card-text">Tác giả:</p>
+                            <p class="card-text">Dịch giả:</p>
+                            <p class="card-text">Nhà xuất bản: Hội nhà văn</p>
+                            <p class="card-text">Số trang: 630</p>
+                            <p class="card-text">Kích thước: 15.5x24 cm</p>
+                            <p class="card-text">Ngày phát hành: 10-03-2023</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="price" style="background-color: rgb(8, 101, 62); margin-top: 30px; color: white;padding: 20px;">
+                            <h5>Giá sách:
+                                <h3><b>214.400đ</b></h3>
+                            </h5>
+                        </div>
+                        <button class="open-button" onclick="openForm()">Mua ngay</button>
+
+                        <div class="form-popup" id="myForm">
+                            <form action="/action_page.php" class="form-container">
+
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Điền email của bạn" name="email" required>
+
+                                <label for="sdt"><b>Số điện thoại</b></label>
+                                <input type="number" placeholder="Điền số điện thoại" name="sdt" required>
+
+                                <label for="quantity"><b>Số lượng sách</b></label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+
+                                <button type="submit" class="butn">Mua</button>
+                                <button type="button" class="butn cancel" onclick="closeForm()">Đóng</button>
+                            </form>
+                        </div>
+                        <button class="button1" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="detail " style="padding: 30px; ">
+                        <p>Có những sự thật sẽ giết chết ta.</p>
+                        <p>Một thế giới hậu tận thế trong tương lai, khô cằn, tàn nhẫn, chết chóc. Ở đó, con người sống cùng nhau, hàng bao thế hệ, trong một tòa tháp đâm sâu vào lòng đất. Khung cảnh bên ngoài chỉ còn là những điểm ảnh, gói gọn trong một
+                            màn hình chiếu. Những câu chuyện, ước ao về vùng đất ngoài kia trở thành đề tài cấm kỵ. Nhưng như lẽ thường phải thế, luôn có những kẻ nuôi hy vọng, giấc mơ, những kẻ mang trong mình niềm lạc quan có thể lây lan cho những cư
+                            dân khác. Hình phạt cho chúng chỉ có một: chúng bị tống đi lau chùi các cảm biến bên ngoài tháp giống.
+                        </p>
+                        <p>Và đó sẽ là chuyến đi không đường trở lại.</p>
+                        <p>Khi cảnh sát trưởng của tháp giống phạm phải tội lỗi không thể tha thứ ấy, Juliette, một thợ máy ở bộ phận Cơ Khí, trở thành người kế nhiệm bất đắc dĩ. Cô không biết rằng mình sắp trở thành nhân tố cuối cùng, góp phần đưa tháp
+                            giống đến với bước ngoặt quyết định sự tồn vong hay tuyệt diện của nó.
+                        </p>
+                        <p>LEN CHÙI (WOOL) là tập đầu tiên trong bộ ba tập về SILO – THÁP GIỐNG của tác giả HUGH HOWEY. Một series phim truyền hình gồm 10 tập, lấy tên Wool, do Rebecca Ferguson đóng chính, được dự kiến ra mắt trên Apple TV+ vào tháng Ba,
+                            2023.
+                        </p>
+                        <p>Hugh Howey (sinh năm 1975) là một tác giả viết truyện sci - fi người Mỹ. Ông trường thành ở Monroe, Bắc Carolina. Các tác phẩm của ông thưởng xoay quanh chủ để vượt qua nghịch cảnh mà không đánh mất chính mình.</p>
+                        <p>LEN CHÙI (WOOL) ra mắt độc giả lần đầu tiên vào năm 2011 như một truyện ngắn độc lập, do tác giả tự xuất bản dưới dạng ebook trên Amazon. Nhờ sự đón nhận nồng nhiệt từ độc giả, ông triển khai câu chuyện để cho ra thêm 4 tiểu thuyết
+                            ngắn. Quyển sách bạn đang cầm trên tay là phiên bản tổng hợp cả 5 phần sách, được phát hành năm 2012, cũng là tập mở đầu cho series SILO – THÁP GIỐNG.</p>
+                        <p>CA TRỰC (SHIFT), tập thứ hai trong series, cũng được phát hành lần đầu thành 3 tiểu thuyết ngắn (phần 6 đến 8 trước khi được in gộp làm 1 quyền vào năm 2013).</p>
+                        <p>CÁT BỤI (DUST), tập cuối cùng trong series, được phát hành năm 2013 dưới dạng một tiểu thuyết hoàn chỉnh.</p>
+                        <p class="card-text "><small class="text-muted ">Cập nhật 3 phút trước</small></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-top ">
+            <li>
+                <a href="https://www.facebook.com " class="fab fa-facebook-f "></a>
+                <a href="https://twitter.com/?lang=vi " class="fab fa-twitter "></a>
+                <a href="https://www.youtube.com/ " class="fab fa-youtube "></a>
+                <a href="https://www.instagram.com/ " class="fab fa-instagram "></a>
+            </li>
+        </div>
+        <div id="footer-top ">
+            <div class="container ">
+                <div class="row ">
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>TRỤ SỞ CHÍNH</h3>
+                        <ul style="list-style-type:disc ">
+                            <li>Số 1 Đại Cồ Việt, Quận Hai Bà Trưng, Hà Nội </li>
+                            <li><i class="iphone "> Số điện thoại: (84.028) 39316289</i></li>
+                            <li>Email:hopthu@nsach.com.vn</li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>CHI NHÁNH HÀ NỘI</h3>
+                        <ul style="list-style-type:disc ">
+                            <li>Số 21, Khu Đầm Trấu, Quận Hai Bà Trưng, Hà Nội </li>
+                            <li><i class="iphone "> Số điện thoại: (024) 37734544</i></li>
+                            <li>Email:chinhanhhanoi@nsach.com</li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>CHI NHÁNH MIỀN TRUNG</h3>
+                        <ul style="list-style-type:disc ">
+                            <li>470 Hoàng Diệu, Q.Hải Châu, TP. Đà Nẵng </li>
+                            <li><i class="iphone "> Số điện thoại: (023) 63539885</i></li>
+                            <li>Email:chinhanhmientrung@nsach.com</li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>CHI NHÁNH MIỀN NAM </h3>
+                        <ul style="list-style-type:disc ">
+                            <li>(Tầng 2) 260 Lê Lợi, Phường 4, TP. Hồ Chí Minh </li>
+                            <li><i class="iphone "> Số điện thoại: 02543600139</i></li>
+                            <li>Email:chinhanhmiennam@nsach.com</li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>CỬA HÀNG GIỚI THIỆU </h3>
+                        <ul style="list-style-type:disc ">
+                            <li>157 Lý Chính Thắng, Quận 3, Thành phố Hồ Chí Minh </li>
+                            <li><i class="iphone "> Số điện thoại: (028) 39311433</i></li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>GIAN HÀNG SÁCH TẠI HCM</h3>
+                        <ul style="list-style-type:disc ">
+                            <li>Đường sách TP. Hồ Chí Minh - P. Bến Nghé, Quận 1, Thành phố Hồ Chí Minh </li>
+                            <li><i class="iphone "> Số điện thoại: 02839141579</i></li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>TRUNG TÂM SÁCH CŨ</h3>
+                        <ul style="list-style-type:disc ">
+                            <li>815-815B Lũy Bán Bích, P. Tân Thành, Quận Tân Phú, Thành phố Hồ Chí Minh </li>
+                            <li><i class="iphone "> Số điện thoại: 0327744002</i></li>
+                        </ul>
+                    </div>
+                    <div id="logo-2 " class="col-lg-3 col-md-6 col-sm-12 ">
+                        <h3>GIẤY PHÉP HOẠT ĐỘNG</h3>
+                        <ul>
+                            <li>Giấy phép hoạt động xuất bản số:151/GP-BTTTT ngày 14/4/2017 của Bộ Thông tin và Truyền thông</li>
+                            <li>Giấy chứng nhận đăng ký kinh doanh số 4104003288, ngày 23/01/2008 của Phòng Đăng ký kinh doanh, Sở kế hoạch đầu tư thành phố Hồ Chí Minh.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom ">
+            <a>© 2014 - Bản quyền của Công Ty Cổ Phần Văn Hoá và Truyền Thông Bookstore - bookstore.com.vn</a>
+            <br>
+            <a>Địa chỉ: 59 Đỗ Quang, phường Trung Hoà, quận Cầu Giấy, Hà Nội</a>
+            <br>
+            <a>Giấy ĐKKD số 0101603420 do Sở KH&ĐT TP Hà Nội cấp ngày 21 tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013</a>
+        </div>
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+    </footer>
+</body>
+
+</html>
