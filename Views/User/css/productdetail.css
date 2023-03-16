@@ -270,41 +270,6 @@ footer {
     background: #24bb77
 }
 
-#mainnav .submenu>li:hover .submenu2 {
-    display: block
-}
-
-#mainnav .submenu2 {
-    background: url("image/");
-    box-shadow: white;
-    display: none;
-    left: 250px;
-    position: absolute;
-    top: -1px;
-    z-index: 9999;
-    width: 250px;
-    list-style-type: none;
-}
-
-#mainnav .submenu2>li>a {
-    background: none repeat scroll 0 0 #24bb77;
-    color: #fff;
-    display: block;
-    line-height: 28px;
-    margin-top: 1px;
-    padding: 0 20px;
-    text-transform: uppercase
-}
-
-#mainnav .submenu2>li:first-child a {
-    margin-top: 0;
-    padding-top: 1px
-}
-
-#mainnav .submenu2>li>a:hover {
-    background: rgba(0, 0, 0, 0)
-}
-
 .button1 {
     background-color: rgb(8, 101, 62);
     color: aliceblue;
