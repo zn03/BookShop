@@ -1,3 +1,3 @@
 <?php
-$connect = mysqli_connect('localhost','root', '', 'aomacanada3');
+$connect = mysqli_connect('localhost','root', '', 'project_1');
 ?>
