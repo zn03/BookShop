@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <link href="    " rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/about.css">
@@ -44,7 +44,7 @@
             <div class="wrapper">
                 <ul class="menu clearfix" list-style-type="none">
                     <li>
-                        <a href="product.html">Danh mục sách</a>
+                        <a href="?redirect=product">Danh mục sách</a>
                         <ul class="submenu">
                             <?php
                                 foreach($arr['category'] as $item) {
@@ -53,29 +53,14 @@
                             <?php } ?>
                         </ul>
                     </li>
-                    <li><a href="">Sách bán chạy</a></li>
-                    <li class="show-mobile"><a href="about.html">Giới thiệu</a></li>
-                    <li class="show-mobile"><a href="contact.html">Liên Hệ</a></li>
-                    <li class="show-mobile"><a href="cart.html">Giỏ hàng</a></li>
+                    <li class="show-mobile"><a href="?redirect=product">Sách bán chạy</a></li>
+                    <li class="show-mobile"><a href="?redirect=about">Giới thiệu</a></li>
+                    <li class="show-mobile"><a href="?redirect=contact">Liên Hệ</a></li>
+                    <li class="show-mobile"><a href="?redirect=cart">Giỏ hàng</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <!-- <div class="billrow" style="margin: 10px;">
-        <div class="col-75">
-            <div class="billcontainer">
-                <form action="/action_page.php">
-                    <div class="billrow">
-                        <div class="col-50">
-                            <h3>Billing Address</h3>
-                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                            <input type="text" id="email" name="email" placeholder="john@example.com">
-                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                            <label for="city"><i class="fa fa-institution"></i> City</label>
-                            <input type="text" id="city" name="city" placeholder="New York"> -->
 
     <?php
         if(isset($_GET['redirect'])) {
