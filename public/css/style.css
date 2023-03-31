@@ -131,7 +131,7 @@ footer {
 }
 
 #mainnav .menu>li:hover>a {
-    background: #24bb77;
+    background: #006400;
 }
 
 #mainnav .menu>li:hover .submenu {
@@ -139,7 +139,19 @@ footer {
 }
 
 #mainnav .submenu {
-    background-color: #24bb77;
+    background-color: #006400;
+    box-shadow: #24bb77;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    z-index: 9999;
+    width: 250px;
+    list-style-type: none;
+}
+
+#mainnav .menu>li .submenu:hover {
+    background-color: #006400;
     box-shadow: #24bb77;
     display: none;
     left: 0;
@@ -162,10 +174,6 @@ footer {
     margin-top: 1px;
     padding: 0 20px;
     text-transform: uppercase;
-}
-
-#mainnav .submenu>li:hover>a {
-    background: #24bb77
 }
 
 

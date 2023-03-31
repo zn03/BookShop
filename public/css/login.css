@@ -21,6 +21,8 @@
     border-radius: 5px;
     border: 1px solid gray;
     padding-left: 20px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
 }
 
 .login button {

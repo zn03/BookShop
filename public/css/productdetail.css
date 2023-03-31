@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
-.body,
+
+/* .body,
 html {
     height: 100%;
     padding: 0;
@@ -37,7 +38,7 @@ html {
     }
 }
 
-header-body {
+*/ header-body {
     height: 160px;
     background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
 }
