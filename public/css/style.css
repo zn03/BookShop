@@ -135,7 +135,7 @@ footer {
 }
 
 #mainnav .menu>li:hover .submenu {
-    display: block
+    display: block;
 }
 
 #mainnav .submenu {
@@ -153,7 +153,7 @@ footer {
 #mainnav .menu>li .submenu:hover {
     background-color: #006400;
     box-shadow: #24bb77;
-    display: none;
+    /* display: none; */
     left: 0;
     position: absolute;
     top: 40px;
@@ -163,7 +163,11 @@ footer {
 }
 
 #mainnav .submenu>li {
-    position: relative
+    position: relative;
+}
+
+#mainnav .submenu>li :hover {
+    border-bottom: 1px solid black;
 }
 
 #mainnav .submenu>li>a {

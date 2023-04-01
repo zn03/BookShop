@@ -112,7 +112,7 @@
                             <label for="re_password" class="form-label">Nhập lại mật khẩu</label>
                             <input type="password" id="re_password" name="re_password" class="form-control" value="<?= $item['password'];?>">
                         </div>                           
-                        <button type="submit" class="btn btn-primary">Thêm Vào</button>
+                        <button type="submit" class="btn btn-primary">Sửa</button>
                         <a href="?controller=admin&redirect=user" class="btn btn-warning"> Trở về Trang người dùng</a>
                     </form>
                     <?php
@@ -123,10 +123,8 @@
         </div>
     </div>
 
-</body>
-<script>
-    CKEDITOR.replace('description')
-</scrip>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 " crossorigin="anonymous "></script>
 
+<script>CKEDITOR.replace('description')</script>
+<script src="public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
 </html>

@@ -22,7 +22,7 @@ if($redirect == '') {
             require_once('Views/Client/about.php');
             ; break ;
         case 'cart': 
-            require_once('Model/Client/index_model.php');
+            require_once('Model/Client/Cart/cart_model.php');
             require_once('Views/Client/index.php');
             require_once('Views/Client/cart.php');
             ; break ;

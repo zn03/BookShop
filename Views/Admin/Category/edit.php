@@ -88,7 +88,7 @@
                             <label for="name" class="form-label">Tên danh mục</label>
                             <input type="text" class="form-control" id="category_name" name="category_name" value="<?= $item['category_name'];?>">
                         </div>
-                        <button type="submit" class="btn btn-primary">Thêm Vào</button>
+                        <button type="submit" class="btn btn-primary">Sửa</button>
                         <a href="?controller=admin&redirect=category" class="btn btn-warning"> Trở về Trang danh mục</a>
                     </form>
                     <?php
@@ -98,11 +98,10 @@
             </div>
         </div>
     </div>
+    <script>CKEDITOR.replace('description')</script>
+    <script src="public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 
 </body>
-<script>
-    CKEDITOR.replace('description')
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 " crossorigin="anonymous "></script>
+
 
 </html>

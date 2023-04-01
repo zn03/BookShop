@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/about.css">
     <link rel="stylesheet" href="public/css/cart.css">
     <link rel="stylesheet" href="public/css/contact.css">
     <link rel="stylesheet" href="public/css/product.css">
     <link rel="stylesheet" href="public/css/product_detail.css">
-    <link rel="stylesheet" href="#">
 </head>
 
 <body>
@@ -45,18 +45,25 @@
                 <ul class="menu clearfix" list-style-type="none">
                     <li>
                         <a href="?redirect=product">Danh mục sách</a>
-                        <ul class="submenu">
+                        <ul class="submenu" >
                             <?php
                                 foreach($arr['category'] as $item) {
                             ?>
-                            <li class="menu-item"><a href="?redirect=product"><?= $item['category_name'] ?></a></li>
+                            <li class="menu-item " ><a href="?redirect=product" style="background-color: #006400;" class="text-decoration-none"><?= $item['category_name'] ?></a></li>
                             <?php } ?>
                         </ul>
                     </li>
-                    <li class="show-mobile"><a href="?redirect=product">Sách bán chạy</a></li>
                     <li class="show-mobile"><a href="?redirect=about">Giới thiệu</a></li>
                     <li class="show-mobile"><a href="?redirect=contact">Liên Hệ</a></li>
                     <li class="show-mobile"><a href="?redirect=cart">Giỏ hàng</a></li>
+                    <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
+                        <ul class="submenu">
+                            <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng nhập</a></li>
+                            <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng xuất</a></li>
+                            <li class="menu item"><a href="index.php?controller=admin" style="background-color: #006400;" class="text-decoration-none">Admin</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -188,7 +195,7 @@
                 });
             }
         </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
