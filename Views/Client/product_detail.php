@@ -11,11 +11,11 @@ html {
 }
 
 
-Animation webkit
+/* Animation webkit
 
 @-webkit-keyframes myfirst {
     0% {
-        margin-left: -235px
+        margin-left: -235px;
     }
     90% {
         margin-left: 100%;
@@ -30,15 +30,15 @@ Animation
 
 @keyframes myfirst {
     0% {
-        margin-left: -235px
+        margin-left: -235px;
     }
     70% {
-        margin-left: 100%;
+        margin-left: 100%;;
     }
     100% {
         margin-left: 100%;
     }
-}
+} */
 
  header-body {
     height: 160px;
@@ -206,7 +206,7 @@ Animation
                         foreach ($arr['product'] as $item) {
                     ?>
                     <div class="col-lg-3">
-                        <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
+                        <a class="product-thumb" >
                             <img src="public/product_image/<?= $item['product_image'] ?>"></a>
                     </div>
                     <div class="col-lg-6">
@@ -214,7 +214,7 @@ Animation
                             <h3><a> * Mã sản phẩm: <?= $item['product_id'] ?> </a></h3> 
                             <a class="product-name text-decoration-none fs-4 text text-dark"> - Tác phẩm: <?= $item['product_name']?></a>
                             <br>
-                            <h3><a class="product-cat"> - Thể loại: <?= $item['category_id'] ?> </a></h3> 
+                            <h3><a class="product-cat text-decoration-none fs-4 text text-dark"> - Thể loại: <?= $item['category_id'] ?> </a></h3> 
                             <h3><a>- Số lượng: <?= $item['product_quantity']?> </a></h3>
                             <div class="fs-4">
                                 <?php
@@ -268,15 +268,15 @@ Animation
             <a class="text-dark"><h3 >Bình luận sản phẩm</h3><a>
             <form method="post" >
                 <div class="form-group">
-                    <a class="text-dark"><label>Tên:</label></a>
-                    <input name="comm_name" required type="text" class="form-control" placeholder="Tên">
+                    <a class="text-dark text-decoration-none "><label>Tên:</label></a>
+                    <input name="comm_name" required type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <a class="text-dark"><label>Email:</label></a>
-                    <input name="comm_mail" required type="email" class="form-control" id="pwd" placeholder="Email">
+                    <a class="text-dark text-decoration-none"><label>Email:</label></a>
+                    <input name="comm_mail" required type="email" class="form-control" id="pwd" >
                 </div>
                 <div class="form-group">
-                    <a class="text-dark"><label>Nội dung:</label></a>
+                    <a class="text-dark text-decoration-none"><label>Nội dung:</label></a>
                     <textarea name="comm_details" required rows="8" class="form-control"></textarea>
                 </div>
                 <button type="submit" name="sbm" class="btn btn-primary">Gửi</button>

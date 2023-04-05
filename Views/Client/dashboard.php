@@ -37,14 +37,14 @@
                                     <div class="product-item">
                                         <div class="product-top">
                                             <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
-                                                <img src="public/product_image/<?= $item['product_image'] ?>">
+                                                <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
                                             </a>
                                             <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now">Mua ngay</a>
                                         </div>
                                         <div class="product-info">
                                             <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
                                             <br>
-                                            <a class="product-cat">Thể loại: <?= $item['category_id'] ?> </a>
+                                            <a class="product-cat text-decoration-none text-dark">Thể loại: <?= $item['category_id'] ?> </a>
                                             <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
                                         </div>
                                     </div>                                                       
@@ -67,14 +67,14 @@
                                     <div class="product-item">
                                         <div class="product-top">
                                             <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
-                                                <img src="public/product_image/<?= $item['product_image'] ?>">
+                                                <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
                                             </a>
             
                                         </div>
                                         <div class="product-info">
                                             <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
                                             <br>
-                                            <a class="product-cat"  href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['category_id'] ?> </a>
+                                            <a class="product-cat"><?= $item['category_id'] ?> </a>
                                             <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
                                         </div>
                                     </div>                                                       

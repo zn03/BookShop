@@ -1,7 +1,14 @@
 <?php
 function index() {
     include_once('Config/connect.php');
-    $query = mysqli_query($connect, "SELECT * FROM product ORDER BY product_id DESC");
+    $query = mysqli_query($connect, "SELECT * FROM product ORDER BY product_id DESC");  
+    include_once('Config/close_connect.php');
+    return $query;
+}
+
+function create() {
+    include_once('Config/connect.php');
+    $query = mysqli_query($connect, "SELECT * FROM category");
     include_once('Config/close_connect.php');
     return $query;
 }
@@ -11,6 +18,7 @@ function store() {
     $name = $_POST['product_name'];
     $price = $_POST['product_price'];
     $quantity = $_POST['product_quantity'];
+    $cate = $_POST['category_id']; 
     $description = $_POST['product_description'];
     $author = $_POST['product_author'];
     $company = $_POST['publishing_company'];
@@ -23,18 +31,24 @@ function store() {
     $image = $_FILES['product_image']['name'];
     $file_tmp = $_FILES['product_image']['tmp_name'];
     $sql = "INSERT INTO product (product_name, product_price, product_quantity, product_author, publishing_company, product_pages, product_description, product_featured, product_image, category_id)
-            VALUES ('$name', $price, $quantity, '$author', '$company', '$pages', '$description', $featured, '$image', 1)";
+            VALUES ('$name', $price, $quantity, '$author', '$company', '$pages', '$description', $featured, '$image', '$cate')";
     mysqli_query($connect, $sql);
-    move_uploaded_file($file_tmp, '/project_1/public/product_image/'.$image);
+    move_uploaded_file($file_tmp, '/public/product_image/'.$image);
     header('location:index.php?controller=admin&redirect=product');
     include_once('Config/close_connect.php');
 }
 function edit() {
     $id = $_GET['id'];
     include_once('Config/connect.php');
-    $query = mysqli_query($connect, "SELECT * FROM product WHERE product_id = '$id'");
+    $query = mysqli_query($connect, "SELECT product.*,category.* FROM product INNER JOIN category ON product.category_id = category.category_id WHERE product_id = '$id'");
+    $cate = mysqli_query($connect, "SELECT * FROM category");
     include_once('Config/close_connect.php');
-    return $query;
+    $values = array();
+    $values['query'] = $query;
+    $values['cate'] = $cate;
+    return $values;
+
+    
 }
 function update() {
     include_once('Config/connect.php');
@@ -83,9 +97,9 @@ function destroy() {
 }
 switch($action) {
     case '' : $record = index(); break;
-    // case 'create' : $record = create(); Truyền mảng sang view add
+    case 'create' : $record = create();break;
     case 'store' : store(); break;
-    case 'edit' : $record = edit(); break;
+    case 'edit' : $values = edit(); break;
     case 'update' : update(); break;
     case 'destroy' : destroy(); break;
 }

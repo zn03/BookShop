@@ -1,7 +1,10 @@
     <div class="body">
-        <div id="form">
-            <div class="header-body">
-                <h1>Liên hệ với chúng tôi</h1>
+        
+        <div class="col col-ld-4"></div>
+        <div class="col col-ld-4">
+             <div id="form">
+               <div class="header-body">
+                <h1>Liên hệ chúng tôi</h1>
             </div>
             <div class="fish" id="fish"></div>
             <div class="fish" id="fish2"></div>
@@ -25,5 +28,10 @@
                 <input type="submit" value="Gửi tin nhắn của bạn!" />
             </form>
         </div>
+        </div>
+        <div class="col col-ld-4"></div>
+
+     
+       
     </div>
     

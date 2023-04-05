@@ -49,7 +49,7 @@
                             <?php
                                 foreach($arr['category'] as $item) {
                             ?>
-                            <li class="menu-item " ><a href="?redirect=product" style="background-color: #006400;" class="text-decoration-none"><?= $item['category_name'] ?></a></li>
+                            <li class="menu-item" ><a href="?redirect=product" style="background-color: #006400;" class="text-decoration-none"><?= $item['category_name'] ?></a></li>
                             <?php } ?>
                         </ul>
                     </li>

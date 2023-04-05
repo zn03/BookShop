@@ -81,7 +81,8 @@
                 
                 <div class="container">
                     <?php
-                        foreach($record as $item){
+                        foreach($values['query'] as $item){
+                           
                      ?>
                         <form method="post" enctype="multipart/form-data" action="?controller=admin&redirect=product&action=update">
                             <input type="hidden" name="product_id" value="<?= $item['product_id'];?>">
@@ -100,11 +101,28 @@
                             <div class="mb-3">
                                 <label for="image" class="form-label">Ảnh Sản Phẩm</label>
                                 <input type="file" class="form-control" id="image" name="product_image">
-                                <img src="/project_1/pulibc/product_image/<?= $item['product_image'];?>" alt="">
+                                <img src="/pulibc/product_image/<?= $item['product_image'];?>" alt="">
                             </div>
                             <div class="mb-3">
                                 <label for="author" class="form-label">Tác giả</label>
                                 <input type="text" class="form-control" id="author" name="product_author" value="<?= $item['product_author'];?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Thể loại</label>
+                                <select class="form-select" name="category_id" aria-label="Default select example">
+                                <option selected><?=$item['category_name']?></option>
+                                <?php
+                                    foreach ($values['cate'] as $cate) {
+                                         
+                                ?>   
+                                    <option value=<?php echo $cate['category_id']; ?>><?php echo $cate['category_name']; ?></option>;
+                                <?php 
+                                    }
+                                ?>
+                                    
+                                
+                                
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="company" class="form-label">Nhà xuất bản</label>

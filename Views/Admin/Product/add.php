@@ -103,6 +103,23 @@
                             <label for="author" class="form-label">Tác giả</label>
                             <input type="text" class="form-control" id="author" name="product_author">
                         </div>
+                        <div>                          
+                                <label for="author" class="form-label">Thể loại</label>
+                                <select class="form-select" name="category_id" aria-label="Default select example">
+                                <option selected>Thể loại</option>
+                                <?php
+                                    foreach ($record as $item) {
+                                         
+                                ?>   
+                                    <option value=<?php echo $item['category_id']; ?>><?php echo $item['category_name']; ?></option>;
+                                <?php 
+                                    }
+                                ?>
+                                    
+                                
+                                
+                                </select>
+                        </div>
                         <div>
                             <label for="company" class="form-label">Nhà xuất bản</label>
                             <input type="text" class="form-control" id="company" name="publishing_company">
