@@ -77,11 +77,9 @@
                 <div class="container-fluid">
                     <h1>Sửa Sản Phẩm</h1>   
                 </div>
-
-                
                 <div class="container">
                     <?php
-                        foreach($values['query'] as $item){
+                        foreach($record['product'] as $item){
                            
                      ?>
                         <form method="post" enctype="multipart/form-data" action="?controller=admin&redirect=product&action=update">
@@ -107,21 +105,19 @@
                                 <label for="author" class="form-label">Tác giả</label>
                                 <input type="text" class="form-control" id="author" name="product_author" value="<?= $item['product_author'];?>">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group mb-3">
                                 <label for="category" class="form-label">Thể loại</label>
-                                <select class="form-select" name="category_id" aria-label="Default select example">
-                                <option selected><?=$item['category_name']?></option>
+                                <select name="category_id" class="form-control">
+                                    <?php
+                                    foreach($record['category'] as $cate) {
+                                ?>
+                                    <option <?php if($item['category_id'] == $cate['category_id']) {echo "selected";} ?>
+                                        value=<?php echo $cate['category_id']; ?>>
+                                        <?php echo $cate['category_name']; ?>
+                                    </option>
                                 <?php
-                                    foreach ($values['cate'] as $cate) {
-                                         
-                                ?>   
-                                    <option value=<?php echo $cate['category_id']; ?>><?php echo $cate['category_name']; ?></option>;
-                                <?php 
                                     }
                                 ?>
-                                    
-                                
-                                
                                 </select>
                             </div>
                             <div class="mb-3">

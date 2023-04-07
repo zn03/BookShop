@@ -111,7 +111,7 @@
                                     foreach ($record as $item) {
                                          
                                 ?>   
-                                    <option value=<?php echo $item['category_id']; ?>><?php echo $item['category_name']; ?></option>;
+                                    <option value="<?= $item['category_id'];?>"><?php echo $item['category_name']; ?></option>;
                                 <?php 
                                     }
                                 ?>

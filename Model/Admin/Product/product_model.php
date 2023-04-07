@@ -40,15 +40,13 @@ function store() {
 function edit() {
     $id = $_GET['id'];
     include_once('Config/connect.php');
-    $query = mysqli_query($connect, "SELECT product.*,category.* FROM product INNER JOIN category ON product.category_id = category.category_id WHERE product_id = '$id'");
-    $cate = mysqli_query($connect, "SELECT * FROM category");
+    $product = mysqli_query($connect, "SELECT * FROM product WHERE product_id='$id'");
+    $category = mysqli_query($connect, "SELECT * FROM category");
     include_once('Config/close_connect.php');
-    $values = array();
-    $values['query'] = $query;
-    $values['cate'] = $cate;
-    return $values;
-
-    
+    $record = array();
+    $record['product'] = $product;
+    $record['category'] = $category;
+    return $record;
 }
 function update() {
     include_once('Config/connect.php');
@@ -56,6 +54,7 @@ function update() {
     $name = $_POST['product_name'];
     $price = $_POST['product_price'];
     $quantity = $_POST['product_quantity'];
+    $cate = $_POST['category_id']; 
     $author = $_POST['product_author'];
     $company = $_POST['publishing_company'];
     $pages = $_POST['product_pages'];
@@ -76,7 +75,8 @@ function update() {
     $sql = "UPDATE product SET 
                 product_name = '$name', 
                 product_price = $price, 
-                product_quantity = $quantity, 
+                product_quantity = $quantity,
+                category_id = '$cate', 
                 product_author = '$author',
                 publishing_company = '$company',
                 product_pages = '$pages',
@@ -99,8 +99,8 @@ switch($action) {
     case '' : $record = index(); break;
     case 'create' : $record = create();break;
     case 'store' : store(); break;
-    case 'edit' : $values = edit(); break;
+    case 'edit' : $record = edit(); break;
     case 'update' : update(); break;
     case 'destroy' : destroy(); break;
 }
-?>;.
+?>

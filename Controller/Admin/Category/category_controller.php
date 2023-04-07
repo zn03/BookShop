@@ -3,26 +3,26 @@ switch($action) {
     case '':
         require_once('Model/Admin/Category/category_model.php');
         require_once('Views/Admin/Category/main.php');
-        ; break;
+         break;
     case 'create':
         require_once('Views/Admin/Category/add.php');
-        ; break;
+         break;
     case 'store':
         require_once('Model/Admin/Category/category_model.php');
         header('location: ?controller='.$controller.'&redirect='.$redirect.'');
-        ; break;
+         break;
     case 'edit':
         require_once('Model/Admin/Category/category_model.php');
         require_once('Views/Admin/Category/edit.php');
-        ; break;
+         break;
     case 'update':
         require_once('Model/Admin/Category/category_model.php');
         header('location: ?controller='.$controller.'&redirect='.$redirect.'');
-        ; break;
+         break;
     case 'destroy' : 
         require_once('Model/Admin/Category/category_model.php');
         header('location: ?controller='.$controller.'&redirect='.$redirect.'');
-        ; break;    
+         break;    
 }
 
 ?>

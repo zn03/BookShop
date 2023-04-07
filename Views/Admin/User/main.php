@@ -19,7 +19,7 @@
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i>
-                        <span>User</span>
+                        <span>Admin</span>
                     </button>
                     <ul class="dropdown-menu">
                         <li>
@@ -136,8 +136,6 @@
             </div>
         </div>
     </div>
-
-
     <script src="public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 

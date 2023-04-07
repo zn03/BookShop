@@ -46,4 +46,4 @@ switch($action) {
     case 'update' : update(); break;
     case 'destroy' : destroy(); break;
 }
-?>;.
+?>
