@@ -9,6 +9,37 @@ html {
     margin: 0;
     font-family: 'Sniglet', cursive;
 }
+
+
+/* Animation webkit
+
+@-webkit-keyframes myfirst {
+    0% {
+        margin-left: -235px;
+    }
+    90% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+
+Animation
+
+@keyframes myfirst {
+    0% {
+        margin-left: -235px;
+    }
+    70% {
+        margin-left: 100%;;
+    }
+    100% {
+        margin-left: 100%;
+    }
+} */
+
  header-body {
     height: 160px;
     background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
@@ -199,18 +230,19 @@ html {
                         <div class="product_price" style="background-color: rgb(8, 101, 62); margin-top: 30px; color: white;padding: 20px;">
                             <h3><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></h3>
                         </div>
+                        <!-- POPUP FORM -->
                         <button class="open-button" onclick="openForm()">Mua ngay</button>
 
                         <div class="form-popup" id="myForm">
                             <form action="/action_page.php" class="form-container">
-
-                                <label for="email"><b>Email</b></label>
+                                <h2 style="color: forestgreen;">Mua ngay</h2>
+                                <label style="color: #04AA6D;" for="email"><b>Email</b></label>
                                 <input type="text" placeholder="Điền email của bạn" name="email" required>
 
-                                <label for="sdt"><b>Số điện thoại</b></label>
-                                <input type="number" placeholder="Điền số điện thoại" name="sdt" required>
+                                <label style="color: #04AA6D;" for="sdt"><b>Số điện thoại</b></label>
+                                <input type="text" placeholder="Điền số điện thoại" name="sdt" required>
 
-                                <label for="quantity"><b>Số lượng sách</b></label>
+                                <label style="color: #04AA6D;" for="quantity"><b>Số lượng sách</b></label>
                                 <input type="number" id="quantity" name="quantity" min="1" max="5" required>
 
                                 <button type="submit" class="butn">Mua</button>
@@ -270,5 +302,13 @@ html {
             </div>
         </div>
     </div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
     
