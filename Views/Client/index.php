@@ -16,10 +16,36 @@
     <link rel="stylesheet" href="public/css/cart.css">
     <link rel="stylesheet" href="public/css/contact.css">
     <link rel="stylesheet" href="public/css/product.css">
-    <link rel="stylesheet" href="public/css/product_detail.css">
+    <link rel="stylesheet" href="public/css/productdetail.css">
+    <style>
+    #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+    #myBtn:hover {
+        background-color: greenyellow;
+    }
+    body {
+    scroll-behavior: smooth;
+    grid-template-columns: auto 0px;
+}
+    </style>
 </head>
 
 <body>
+
     <header>
         <div class="container">
             <div class="row">
@@ -177,6 +203,7 @@
             <br>
             <a>Giấy ĐKKD số 0101603420 do Sở KH&ĐT TP Hà Nội cấp ngày 21 tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013</a>
         </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon style="font-size: 32px;" name="arrow-up-outline"></ion-icon></button>
     </footer>
     <script>
             //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
@@ -194,8 +221,30 @@
                     }
                 });
             }
+            // Get the button
+            let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
         </script>
     <script src="public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- ion-icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
