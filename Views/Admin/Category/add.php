@@ -8,7 +8,7 @@
     <title>BookStore - Admin</title>
     <link rel="stylesheet" href="public/css/admin.css">
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/">       
-    <link rel="stylesheet" href="public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     
 </head>
 

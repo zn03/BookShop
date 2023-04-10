@@ -9,55 +9,11 @@ html {
     margin: 0;
     font-family: 'Sniglet', cursive;
 }
-
-
-/* Animation webkit
-
-@-webkit-keyframes myfirst {
-    0% {
-        margin-left: -235px;
-    }
-    90% {
-        margin-left: 100%;
-    }
-    100% {
-        margin-left: 100%;
-    }
-}
-
-
-Animation
-
-@keyframes myfirst {
-    0% {
-        margin-left: -235px;
-    }
-    70% {
-        margin-left: 100%;;
-    }
-    100% {
-        margin-left: 100%;
-    }
-} */
-
  header-body {
     height: 160px;
     background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
 }
 
-.fish {
-    background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
-    width: 235px;
-    height: 104px;
-    margin-left: -235px;
-    position: absolute;
-    animation: myfirst 24s;
-    -webkit-animation: myfirst 24s;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-}
 #form {
     height: 100%;
     background-color: #98d4f3;
@@ -210,23 +166,32 @@ Animation
                             <img src="public/product_image/<?= $item['product_image'] ?>"></a>
                     </div>
                     <div class="col-lg-6">
-                        <div class="card-body ml-4">
+                        <div class="card-body ml-4 text-decoration-none fs-4 text text-dark">
                             <h3><a> * Mã sản phẩm: <?= $item['product_id'] ?> </a></h3> 
                             <a class="product-name text-decoration-none fs-4 text text-dark"> - Tác phẩm: <?= $item['product_name']?></a>
                             <br>
-                            <h3><a class="product-cat text-decoration-none fs-4 text text-dark"> - Thể loại: <?= $item['category_id'] ?> </a></h3> 
-                            <h3><a>- Số lượng: <?= $item['product_quantity']?> </a></h3>
+                            <h3><a class="product-cat text-decoration-none fs-4 text text-dark">
+                            <?php
+                                foreach($arr['category'] as $cate) {
+                            ?>  
+                                - Thể loại:  <?php if($item['category_id'] == $cate['category_id'])?>
+                                            <?php echo $cate['category_name']; ?>   
+                            <?php
+                                }
+                            ?>                         
+                            </a></h3> 
+                            <h3><a class=" text-decoration-none fs-4 text text-dark">- Số lượng: <?= $item['product_quantity']?> </a></h3>
                             <div class="fs-4">
                                 <?php
                                     if($item['product_quantity'] == 0) {
                                         echo '<div class="text-danger" fs4>- Hết hàng</div>';
                                     }else {
-                                        echo '<div id="status">- Còn hàng</div>';
+                                        echo '<div class="text text-dark" id="status">- Còn hàng</div>';
                                  } ?>
                             </div>
-                            <h3><a> - Tác giả: <?= $item['product_author'] ?> </a></h3>  
-                            <h3><a> - Nhà xuất bản: <?= $item['publishing_company'] ?> </a></h3>   
-                            <h3><a> - Số trang: <?= $item['product_pages'] ?> </a></h3>      
+                            <h3><a class="text-decoration-none fs-4 text text-dark"> - Tác giả: <?= $item['product_author'] ?> </a></h3>  
+                            <h3><a class="text-decoration-none fs-4 text text-dark"> - Nhà xuất bản: <?= $item['publishing_company'] ?> </a></h3>   
+                            <h3><a class="text-decoration-none fs-4 text text-dark"> - Số trang: <?= $item['product_pages'] ?> </a></h3>      
                         </div>
                         
                     </div>

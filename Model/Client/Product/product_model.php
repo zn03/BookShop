@@ -9,7 +9,6 @@ function index() {
     $arr = array();
     $arr['category'] = $cate;
     $arr['product'] = $query;
-    
     return $arr;
 
 }

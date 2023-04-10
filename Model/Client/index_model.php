@@ -4,7 +4,7 @@ function index() {
     $sql_cate = "SELECT * FROM category ORDER BY category_id ASC";
     $query_cate = mysqli_query($connect, $sql_cate);
     $sql_product = "SELECT * FROM product";
-    $query_product = mysqli_query($connect, $sql_cate);
+    $query_product = mysqli_query($connect, $sql_product);
     $sql_prd_featured = "SELECT * FROM product WHERE product_featured = 1 ORDER BY product_id DESC LIMIT 8 ";
     $query_prd_featured = mysqli_query($connect, $sql_prd_featured);
     $sql_prd_new = "SELECT * FROM product ORDER BY product_id DESC LIMIT 8";

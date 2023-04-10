@@ -7,7 +7,7 @@
     <title>BookStore - Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/admin.css">
-    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/">
+    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <script src="ckeditor/ckeditor.js"></script>
 </head>
 
@@ -108,7 +108,7 @@
                             <div class="form-group mb-3">
                                 <label for="category" class="form-label">Thể loại</label>
                                 <select name="category_id" class="form-control">
-                                    <?php
+                                <?php
                                     foreach($record['category'] as $cate) {
                                 ?>
                                     <option <?php if($item['category_id'] == $cate['category_id']) {echo "selected";} ?>
