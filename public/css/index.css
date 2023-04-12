@@ -52,3 +52,28 @@
     transition: 0.25s ease-in-out;
     opacity: 0.85;
 }
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 1450px;
+    z-index: 99;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#myBtn:hover {
+    background-color: greenyellow;
+}
+
+body {
+    scroll-behavior: smooth;
+    grid-template-columns: auto 0px;
+}

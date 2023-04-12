@@ -19,8 +19,8 @@
     #myBtn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 10px;
+    right: 1450px;
     z-index: 99;
     font-size: 12px;
     border: none;
@@ -29,7 +29,7 @@
     color: white;
     cursor: pointer;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
     #myBtn:hover {
