@@ -1,30 +1,17 @@
 <?php
 function index() {
-    $id = $_GET['id'];
+    $id = $_GET['category_id'];
     include_once('Config/connect.php');
-    $cate = mysqli_query($connect, "SELECT * FROM category ORDER BY category_id ASC");
-    $sql = "SELECT * FROM product WHERE product_id = '$id'";
-    $query = mysqli_query($connect, $sql);
+    $sql_cate = "SELECT * FROM category ORDER BY category_id ASC";
+    $query_cate = mysqli_query($connect, $sql_cate);
+    $sql_product = "SELECT * FROM product WHERE category_id = '$id'";
+    $query_product = mysqli_query($connect, $sql_product); 
     include_once('Config/close_connect.php');
     $arr = array();
-    $arr['category'] = $cate;
-    $arr['product'] = $query;
+    $arr['product'] = $query_product;
+    $arr['category'] = $query_cate;
     return $arr;
-
 }
-// function product() {
-//     include_once('Config/connect.php');
-//     $cate = mysqli_query($connect, "SELECT * FROM category ORDER BY category_id ASC");
-//     $sql = "SELECT * FROM product";
-//     $query = mysqli_query($connect, $sql);
-//     include_once('Config/close_connect.php');
-//     $arr = array();
-//     $arr['category'] = $cate;
-//     $arr['product'] = $query;
-//     return $arr;
-// }
-
-
 switch($redirect) {
     case 'product': $arr = index()  ;break;
     case 'product_detail': $arr = index(); break;

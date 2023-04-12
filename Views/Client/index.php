@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="public/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/">       
+    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/about.css">
     <link rel="stylesheet" href="public/css/cart.css">
@@ -57,7 +55,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
 
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12"><img src="/project_1/public/image/gop-y-vn.png" width="350px" alt="text"></div>
+                <div class="col-lg-3 col-md-6 col-sm-12"><img src="public/image/gop-y-vn.png" width="350px" alt="text"></div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <!-- <div class="search-wrapper">
                         <input type="text" placeholder="Tìm kiếm sản phẩm...">
@@ -70,12 +68,12 @@
             <div class="wrapper">
                 <ul class="menu clearfix" list-style-type="none">
                     <li>
-                        <a href="?redirect=product">Danh mục sách</a>
+                        <a >Danh mục sách</a>
                         <ul class="submenu" >
                             <?php
                                 foreach($arr['category'] as $item) {
                             ?>
-                            <li class="menu-item" ><a href="?redirect=product" style="background-color: #006400;" class="text-decoration-none"><?= $item['category_name'] ?></a></li>
+                            <li class="menu-item" ><a href="?redirect=product&category_id=<?=$item['category_id']?>" style="background-color: #006400;" class="text-decoration-none"><?= $item['category_name'] ?></a></li>
                             <?php } ?>
                         </ul>
                     </li>
@@ -85,9 +83,7 @@
                     <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
                             <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng nhập</a></li>
-                            <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng xuất</a></li>
                             <li class="menu item"><a href="index.php?controller=admin" style="background-color: #006400;" class="text-decoration-none">Admin</a></li>
-
                         </ul>
                     </li>
                 </ul>
@@ -113,6 +109,9 @@
                     break;
                 case 'product' :
                     include_once('Views/Client/product.php');    
+                    break;
+                case 'login' :
+                    include_once('Views/login-logout/login.php');
                     break;    
             }
         } else{

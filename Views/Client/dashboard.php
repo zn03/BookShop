@@ -44,7 +44,7 @@
                                         <div class="product-info">
                                             <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
                                             <br>
-                                            <a class="product-cat text-decoration-none text-dark">Thể loại: <?= $item['category_id'] ?> </a>
+                                            <a class="product-cat text-decoration-none text-dark">Thể loại: <?= $item['category_name']?> </a>
                                             <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
                                         </div>
                                     </div>                                                       
@@ -74,7 +74,7 @@
                                         <div class="product-info">
                                             <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
                                             <br>
-                                            <a class="product-cat"><?= $item['category_id'] ?> </a>
+                                            <a class="product-cat text-decoration-none text-dark">Thể loại: <?= $item['category_name']?> </a>
                                             <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
                                         </div>
                                     </div>                                                       

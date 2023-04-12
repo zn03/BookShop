@@ -29,7 +29,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="index.php?controller=login&action=logout">
-                                <i class="fa-solid fa-envelope"></i> Logout
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout
                             </a>
                         </li>
                     </ul>
@@ -73,7 +73,7 @@
                 </ul>
             </div>
 
-            <div class="page-wrapper col-sm-10 col-lg-6 sidebar">
+            <div class="page-wrapper col-sm-10 col-lg-9 sidebar">
                 <div class="container-fluid">
                     <div class="row">
                         <h1 class="page-header">Quản Lý Sản Phẩm</h1>
@@ -93,6 +93,7 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Tên Sản Phẩm</th>
+                                            <th scope="col">Thể loại</th>
                                             <th scope="col">Giá Tiền</th>
                                             <th scope="col">Số Lượng</th>
                                             <th scope="col">Trạng Thái</th>
@@ -116,6 +117,9 @@
                                                     <?= $item['product_name']?>
                                                 </td>
                                                 <td>
+                                                    <?= $item['category_name']?>
+                                                </td>
+                                                <td>
                                                     <?= number_format($item['product_price']); ?>đ
                                                 </td>
                                                 <td>
@@ -129,7 +133,7 @@
                                                  }
                                             ?>
 
-                                                    <td><img class="col-12" src="/project_1/public/product_image/<?= $item['product_image']?>"></td>
+                                                    <td><img width="100x" src="public/product_image/<?= $item['product_image']?>"></td>
                                                     <td><a href="index.php?controller=admin&redirect=product&action=edit&id=<?= $item['product_id'];?>" class="btn btn-info">Edit</a></td>
                                                     <td><a href="index.php?controller=admin&redirect=product&action=destroy&id=<?= $item['product_id'];?> " class="btn btn-danger">Delete</a></td>
                                             </tr>

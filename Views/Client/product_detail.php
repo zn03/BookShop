@@ -194,22 +194,15 @@ Animation
                     ?>
                     <div class="col-lg-3">
                         <a class="product-thumb" >
-                            <img src="public/product_image/<?= $item['product_image'] ?>"></a>
+                            <img width="275px" height="380px" src="public/product_image/<?= $item['product_image'] ?>"></a>
                     </div>
                     <div class="col-lg-6">
                         <div class="card-body ml-4 text-decoration-none fs-4 text text-dark">
                             <h3><a> * Mã sản phẩm: <?= $item['product_id'] ?> </a></h3> 
                             <a class="product-name text-decoration-none fs-4 text text-dark"> - Tác phẩm: <?= $item['product_name']?></a>
                             <br>
-                            <h3><a class="product-cat text-decoration-none fs-4 text text-dark">
-                            <?php
-                                foreach($arr['category'] as $cate) {
-                            ?>  
-                                - Thể loại:  <?php if($item['category_id'] == $cate['category_id'])?>
-                                            <?php echo $cate['category_name']; ?>   
-                            <?php
-                                }
-                            ?>                         
+                            <h3><a class="product-cat text-decoration-none fs-4 text text-dark">  
+                                - Thể loại:  <?= $item['category_name']?> 
                             </a></h3> 
                             <h3><a class=" text-decoration-none fs-4 text text-dark">- Số lượng: <?= $item['product_quantity']?> </a></h3>
                             <div class="fs-4">
@@ -243,13 +236,13 @@ Animation
                                 <input type="text" placeholder="Điền số điện thoại" name="sdt" required>
 
                                 <label style="color: #04AA6D;" for="quantity"><b>Số lượng sách</b></label>
-                                <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+                                <input type="number" id="quantity" name="quantity" required>
 
                                 <button type="submit" class="butn">Mua</button>
                                 <button type="button" class="butn cancel" onclick="closeForm()">Đóng</button>
                             </form>
                         </div>
-                        <button class="button1" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button>
+                        <!-- <button class="button1" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button> -->
                     </div>
                     <div class="detail " style="padding: 30px; ">
                         <div class="col-lg-12 col-md-12 col-sm-12">

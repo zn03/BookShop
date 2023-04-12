@@ -1,7 +1,8 @@
 <?php
 function index() {
     include_once('Config/connect.php');
-    $query = mysqli_query($connect, "SELECT * FROM product ORDER BY product_id DESC");  
+    $query = mysqli_query($connect, "SELECT * FROM product INNER JOIN category
+    ON product.category_id = category.category_id ORDER BY product_id DESC");  
     include_once('Config/close_connect.php');
     return $query;
 }
@@ -33,7 +34,7 @@ function store() {
     $sql = "INSERT INTO product (product_name, product_price, product_quantity, product_author, publishing_company, product_pages, product_description, product_featured, product_image, category_id)
             VALUES ('$name', $price, $quantity, '$author', '$company', '$pages', '$description', $featured, '$image', '$cate')";
     mysqli_query($connect, $sql);
-    move_uploaded_file($file_tmp, '/public/product_image/'.$image);
+    move_uploaded_file($file_tmp, 'public/product_image/'.$image);
     header('location:index.php?controller=admin&redirect=product');
     include_once('Config/close_connect.php');
 }
@@ -70,7 +71,7 @@ function update() {
     }else {
         $image = $_FILES['product_image']['name'];
         $file_tmp = $_FILES['product_image']['tmp_name'];
-        move_uploaded_file($file_tmp, '/project_1/public/product_image/'.$image);
+        move_uploaded_file($file_tmp, 'public/product_image/'.$image);
     }
     $sql = "UPDATE product SET 
                 product_name = '$name', 

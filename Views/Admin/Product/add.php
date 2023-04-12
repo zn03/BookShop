@@ -30,7 +30,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="index.php?controller=login&action=logout">
-                                <i class="fa-solid fa-envelope"></i> Logout
+                            <i class="fa-solid fa-right-from-bracket"></i>Logout
                             </a>
                         </li>
                     </ul>
