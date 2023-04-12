@@ -7,7 +7,7 @@
     <title>BookStore - Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/admin.css">
-    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/">
+    <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     
 </head>
 
@@ -29,7 +29,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="index.php?controller=login&action=logout">
-                                <i class="fa-solid fa-envelope"></i> Logout
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout
                             </a>
                         </li>
                     </ul>
@@ -83,31 +83,31 @@
                     <form method="post" enctype="multipart/form-data" action="index.php?controller=admin&redirect=user&action=store">
                         <div>
                             <label for="fullname" class="form-label">Tên người dùng</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nhập tên người dùng...">
+                            <input type="text" class="form-control" id="fullname" name="fullname" >
                         </div>
                         <div>
                             <label for="user_name" class="form-label">Tên đăng nhập</label>
-                            <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nhập tên đăng nhập...">
+                            <input type="text" class="form-control" id="user_name" name="user_name" >
                         </div>
                         <div>
                             <label for="user_email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="user_email" name="user_email" placeholder="Nhập email...">
+                            <input type="text" class="form-control" id="user_email" name="user_email" >
                         </div>
                         <div>
                             <label for="user_address" class="form-label">Địa chỉ</label>
-                            <input type="text" class="form-control" id="user_address" name="user_address" placeholder="Nhập địa chỉ...">
+                            <input type="text" class="form-control" id="user_address" name="user_address" >
                         </div>
                         <div>
                             <label for="user_phone" class="form-label">Số điện thoại</label>
-                            <input type="text" class="form-control" id="user_phone" name="user_phone" placeholder="Nhập số điện thoại...">
+                            <input type="text" class="form-control" id="user_phone" name="user_phone" >
                         </div>                        
                         <div class="mb-3">
                             <label for="password" class="form-label">Mật khẩu</label>
-                            <input type="password" id="password" name="password" class="form-control" placeholder="Nhập mật khẩu..." required>
+                            <input type="password" id="password" name="password" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="re_password" class="form-label">Nhập lại mật khẩu</label>
-                            <input type="password" id="re_password" name="re_password" class="form-control" placeholder="Nhập lại mật khẩu...">
+                            <input type="password" id="re_password" name="re_password" class="form-control" >
                         </div>                           
                         <button type="submit" class="btn btn-primary">Thêm Vào</button>
                         <button type="reset" class="btn btn-primary">Reset</button>

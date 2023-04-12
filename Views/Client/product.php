@@ -5,146 +5,42 @@
                     <?php
                         foreach($arr['category'] as $item) {
                     ?>
-                    <button class="dropdown-btn"><a href="?redirect=product"><?= $item['category_name'] ?></a></button>
+                    <a href="?redirect=product&category_id=<?=$item['category_id']?>"><?= $item['category_name'] ?></a>
                     <?php } ?>
-                        <i class="fa fa-caret-down"></i>
-                        </button>
+                
                     
                 </div>
             </div>
-            <div class="col-lg-10">
-                <div class=" wrapper mt-3">
-                    <ul class="products">
-                        <li>
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
+        <div class="col-lg-10">
+            <div class=" wrapper">
+                    <h1><a class="product-cat text-decoration-none"> Thể loại:</a></h1>
+                 
+                 <br>
+                <div class="row">
+                    <?php
+                        foreach ($arr['product'] as $item) {
+                    ?>
+                        <div class="col-3">
+                            <div class="products">
+                                    <div class="product-item">
+                                        <div class="product-top">
+                                            <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
+                                                <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
+                                            </a>
+                                            <!-- <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now">Mua ngay</a> -->
+                                        </div>
+                                        <div class="product-info">
+                                            <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
+                                            <br>
+                                           
+                                            <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
+                                        </div>
+                                    </div>                                                       
                             </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="product-item">
-                                <div class="product-top">
-                                    <a href="" class="product-thumb">
-                                        <img src="https://bizweb.dktcdn.net/100/180/408/products/len-chui-silo-thap-giong-1.png?v=1678041946017" alt="">
-                                    </a>
-                                    <a href="" class="buy-now">Mua ngay</a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="" class="product-cat">Văn học</a>
-                                    <a href="" class="product-name"> LEN CHÙI - SILO THÁP GIỐNG</a>
-                                    <div class="product-price">214.400đ</div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
+                        </div>
+                    <?php } ?>    
                 </div>
+            </div>
             </div>
         </div>
 
