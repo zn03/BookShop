@@ -27,6 +27,32 @@
             <div class="title-wrapper">
                 <h3>SÁCH NỔI BẬT</h3>
             </div>
+            <div class=" wrapper mt-3">
+                <ul class="products">
+                
+                    <li>
+                    <?php
+                        foreach ($arr['product_featured'] as $item) {
+                    ?>
+                        <div class="product-item">
+                        <div class="product-top">
+                                <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="product-thumb">
+                                    <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
+                                </a>
+                                <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now">Mua ngay</a>
+                            </div>
+                            <div class="product-info">
+                                <a class="product-cat text-decoration-none text-dark">Thể loại: <?= $item['category_id'] ?> </a>
+                                <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
+                                <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
+                            </div>
+                        </div>
+                    <?php } ?> 
+                    </li>
+
+                 
+                </ul>
+            </div>
             <div class=" wrapper">
                 <div class="row">
                     <?php
@@ -83,4 +109,22 @@
                     <?php } ?>    
                 </div>
             </div>
-        </div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script>
+            //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+        </script>
