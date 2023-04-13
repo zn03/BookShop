@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="public/css/product.css">
+<head>
+    <link rel="stylesheet" href="public/css/product.css">
+</head>
     <div class="body">
         <div class="row">
             <div class="col-lg-2">

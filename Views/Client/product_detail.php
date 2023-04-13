@@ -1,5 +1,160 @@
 <link rel="stylesheet" href="public/css/productdetail.css">
+<style>
+    /* comment style */
+    * {
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #f9f9f9;
 
+}
+button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    padding: 4px 8px;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+button:hover,
+button:focus,
+button:active {
+    cursor: pointer;
+    background-color: #ecf0f1;
+}
+.comment-thread {
+    width: 1100px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 30px;
+    background-color: #fff;
+    border: 1px solid transparent; /* Removes margin collapse */
+}
+.m-0 {
+    margin: 0;
+}
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Comment */
+
+.comment {
+    position: relative;
+    margin: 20px auto;
+}
+.comment-heading {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+}
+.comment-voting {
+    width: 20px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.comment-voting button {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    border: 0;
+    font-size: 10px;
+}
+.comment-info {
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+}
+.comment-author {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+    text-decoration: none;
+}
+.comment-author:hover {
+    text-decoration: underline;
+}
+.replies {
+    margin-left: 20px;
+}
+
+/* Adjustments for the comment border links */
+
+.comment-border-link {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 12px;
+    height: calc(100% - 50px);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+}
+.comment-border-link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.comment-body {
+    padding: 0 20px;
+    padding-left: 28px;
+}
+.replies {
+    margin-left: 28px;
+}
+
+/* Adjustments for toggleable comments */
+
+details.comment summary {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+details.comment summary::-webkit-details-marker {
+    display: none;
+}
+details.comment:not([open]) .comment-heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.comment-heading::after {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    align-self: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.55);
+}
+details.comment[open] .comment-heading::after {
+    content: "Nhấn để ẩn";
+}
+details.comment:not([open]) .comment-heading::after {
+    content: "Nhấn để mở";
+}
+
+/* Adjustment for Internet Explorer */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Resets cursor, and removes prompt text on Internet Explorer */
+    .comment-heading {
+        cursor: default;
+    }
+    details.comment[open] .comment-heading::after,
+    details.comment:not([open]) .comment-heading::after {
+        content: " ";
+    }
+}
 </style>
  
     <div class="body">
@@ -76,7 +231,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <a class="text-dark"><h3 >Bình luận sản phẩm</h3><a>
             <form method="post" >
-                <div class="form-group">
+                <div class="form-group  ">
                     <a class="text-dark text-decoration-none "><label>Tên:</label></a>
                     <input name="comm_name" required type="text" class="form-control">
                 </div>
@@ -88,25 +243,236 @@
                     <a class="text-dark text-decoration-none"><label>Nội dung:</label></a>
                     <textarea name="comm_details" required rows="8" class="form-control"></textarea>
                 </div>
-                <button type="submit" name="sbm" class="btn btn-primary">Gửi</button>
+                <button type="submit" name="sbm" class="btn btn-primary mt-2 w-auto">Gửi</button>
             </form>
         </div>
     </div>
     <!--	End Comment	-->
 
     <!--	Comments List	-->
-    <div id="comments-list" class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <h2> Tổng hợp bình luận: </h2>
-            <div class="comment-item">
-                <ul style="list-style-type:none;">
-                    <li><h3>* Nguyễn Văn A  (2018-01-03 20:40:10) :</h3></li>
-                    <li><h4>- Sách rất hay, rất bổ ích, mong nhà sách sẽ sớm phát triển thêm nhiều bộ truyện hay.</h4></li>
-                    <li><h4>- Sách rất hay, rất bổ ích, mong nhà sách sẽ sớm phát triển thêm nhiều bộ truyện hay.</h4></li>
-                </ul>
+    <div class="comment-thread">
+    <!-- Comment 1 start -->
+    <details open class="comment" id="comment-1">
+        <a href="#comment-1" class="comment-border-link">
+            <span class="sr-only">Jump to comment-1</span>
+        </a>
+        <summary>
+            <div class="comment-heading">
+                <div class="comment-voting">
+                    <button type="button">
+                        <span aria-hidden="true">&#9650;</span>
+                        <span class="sr-only">Vote up</span>
+                    </button>
+                    <button type="button">
+                        <span aria-hidden="true">&#9660;</span>
+                        <span class="sr-only">Vote down</span>
+                    </button>
+                </div>
+                <div class="comment-info">
+                    <a href="#" class="comment-author">someguy14</a>
+                    <p class="m-0">
+                        22 like &bull; 4 ngày trước
+                    </p>
+                </div>
             </div>
+        </summary>
+
+        <div class="comment-body">
+            <p>
+                Điều này thực sự tuyệt vời! Quyển sách này rất hay và nó chắc chắn sẽ giúp ích cho tôi trong tương lai. Cảm ơn!
+            </p>
+            <button type="button">Like</button>
+            <button type="button">Dislike</button>
         </div>
-    </div>
+
+        <div class="replies">
+            <!-- Comment 2 start -->
+            <details open class="comment" id="comment-2">
+                <a href="#comment-2" class="comment-border-link">
+                    <span class="sr-only">Jump to comment-2</span>
+                </a>
+                <summary>
+                    <div class="comment-heading">
+                        <div class="comment-voting">
+                            <button type="button">
+                                <span aria-hidden="true">&#9650;</span>
+                                <span class="sr-only">Vote up</span>
+                            </button>
+                            <button type="button">
+                                <span aria-hidden="true">&#9660;</span>
+                                <span class="sr-only">Vote down</span>
+                            </button>
+                        </div>
+                        <div class="comment-info">
+                            <a href="#" class="comment-author">randomperson81</a>
+                            <p class="m-0">
+                                4 like &bull; 3 ngày trước
+                            </p>
+                        </div>
+                    </div>
+                </summary>
+
+                <div class="comment-body">
+                    <p>
+                        Chắc *** gì đã hay?
+                    </p>
+                    <button type="button">Like</button>
+                <button type="button">Dislike</button>
+                </div>
+            </details>
+            <!-- Comment 2 end -->
+
+            <!-- Comment 3 start -->
+            <details open class="comment" id="comment-3">
+                <a href="#comment-3" class="comment-border-link">
+                    <span class="sr-only">Jump to comment-3</span>
+                </a>
+                <summary>
+                    <div class="comment-heading">
+                        <div class="comment-voting">
+                            <button type="button">
+                                <span aria-hidden="true">&#9650;</span>
+                                <span class="sr-only">Vote up</span>
+                            </button>
+                            <button type="button">
+                                <span aria-hidden="true">&#9660;</span>
+                                <span class="sr-only">Vote down</span>
+                            </button>
+                        </div>
+                        <div class="comment-info">
+                            <a href="#" class="comment-author">2edgy4u</a>
+                            <p class="m-0">
+                                19 dislike &bull; 3 ngày trước
+                            </p>
+                        </div>
+                    </div>
+                </summary>
+
+                <div class="comment-body">
+                    <p>
+                        ??????
+                    </p>
+                    <button type="button">Like</button>
+                    <button type="button">Dislike</button>
+                </div>
+
+                <div class="replies">
+                    <!-- Comment 4 start -->
+                    <details open class="comment" id="comment-4">
+                        <a href="#comment-4" class="comment-border-link">
+                            <span class="sr-only">Jump to comment-4</span>
+                        </a>
+                        <summary>
+                            <div class="comment-heading">
+                                <div class="comment-voting">
+                                    <button type="button">
+                                        <span aria-hidden="true">&#9650;</span>
+                                        <span class="sr-only">Vote up</span>
+                                    </button>
+                                    <button type="button">
+                                        <span aria-hidden="true">&#9660;</span>
+                                        <span class="sr-only">Vote down</span>
+                                    </button>
+                                </div>
+                                <div class="comment-info">
+                                    <a href="#" class="comment-author">modpowertrip</a>
+                                    <p class="m-0">
+                                        9 like &bull; 2 ngày trước
+                                    </p>
+                                </div>
+                            </div>
+                        </summary>
+
+                        <div class="comment-body">
+                            <p>
+                                Bạn đang vi phạm <a href="#rule-687">Quy tắc #687</a> với nhận xét đó. Xin vui lòng tránh đăng như thế này trong tương lai, hoặc tôi sẽ cấm bạn.
+                            </p>
+                            <button type="button">Like</button>
+                            <button type="button">Dislike</button>
+                        </div>
+                    </details>
+                    <!-- Comment 4 end -->
+
+                    <!-- Comment 5 start -->
+                    <details open class="comment" id="comment-5">
+                        <a href="#comment-5" class="comment-border-link">
+                            <span class="sr-only">Jump to comment-5</span>
+                        </a>
+                        <summary>
+                            <div class="comment-heading">
+                                <div class="comment-voting">
+                                    <button type="button">
+                                        <span aria-hidden="true">&#9650;</span>
+                                        <span class="sr-only">Vote up</span>
+                                    </button>
+                                    <button type="button">
+                                        <span aria-hidden="true">&#9660;</span>
+                                        <span class="sr-only">Vote down</span>
+                                    </button>
+                                </div>
+                                <div class="comment-info">
+                                    <a href="#" class="comment-author">imemespam</a>
+                                    <p class="m-0">
+                                        3 like &bull; 2 ngày trước
+                                    </p>
+                                </div>
+                            </div>
+                        </summary>
+
+                        <div class="comment-body">
+                            <p>
+                               +1 vote ban
+                            </p>
+                            <button type="button">Like</button>
+                             <button type="button">Dislike</button>
+                        </div>
+                    </details>
+                    <!-- Comment 5 end -->
+
+                    <!-- Comment 6 start -->
+                    <details open class="comment" id="comment-6">
+                        <a href="#comment-6" class="comment-border-link">
+                            <span class="sr-only">Jump to comment-6</span>
+                        </a>
+                        <summary>
+                            <div class="comment-heading">
+                                <div class="comment-voting">
+                                    <button type="button">
+                                        <span aria-hidden="true">&#9650;</span>
+                                        <span class="sr-only">Vote up</span>
+                                    </button>
+                                    <button type="button">
+                                        <span aria-hidden="true">&#9660;</span>
+                                        <span class="sr-only">Vote down</span>
+                                    </button>
+                                </div>
+                                <div class="comment-info">
+                                    <a href="#" class="comment-author">lukerbro57</a>
+                                    <p class="m-0">
+                                        0 like &bull; 2 ngày trước 
+                                    </p>
+                                </div>
+                            </div>
+                        </summary>
+
+                        <div class="comment-body">
+                            <p>
+                                +2 vote ban
+                            </p>
+                            <button type="button">Like</button>
+                            <button type="button">Dislike</button>
+                        </div>
+                    </details>
+                    <!-- Comment 6 end -->
+
+                    <a href="#load-more">Xem thêm</a>
+                </div>
+            </details>
+            <!-- Comment 3 end -->
+        </div>
+    </details>
+    <!-- Comment 1 end -->
+</div>
     <!--	End Comments List	-->
 
                 </div>

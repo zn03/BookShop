@@ -75,10 +75,6 @@ header-body {
 
 /* POPUP BUTTON */
 
-* {
-    box-sizing: border-box;
-}
-
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 
@@ -164,4 +160,9 @@ header-body {
 .form-container .butn:hover,
 .open-button:hover {
     opacity: 1;
+}
+
+.comment-block {
+    border-radius: 20px;
+    border-color: black;
 }
