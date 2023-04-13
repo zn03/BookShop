@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="public/css/cart.css">
     <div id="body">
         <div id="my-cart">
             <div class="row">

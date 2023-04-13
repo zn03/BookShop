@@ -1,4 +1,4 @@
-        <div class="body">
+       <div class="body">
             <div class="row">
                 <div class="col-lg-12 col-md-3">
                     <div id="carouselExampleControls" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -27,32 +27,7 @@
             <div class="title-wrapper">
                 <h3>SÁCH NỔI BẬT</h3>
             </div>
-            <div class=" wrapper mt-3">
-                <ul class="products">
-                
-                    <li>
-                    <?php
-                        foreach ($arr['product_featured'] as $item) {
-                    ?>
-                        <div class="product-item">
-                        <div class="product-top">
-                                <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="product-thumb">
-                                    <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
-                                </a>
-                                <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now">Mua ngay</a>
-                            </div>
-                            <div class="product-info">
-                                <a class="product-cat text-decoration-none text-dark">Thể loại: <?= $item['category_id'] ?> </a>
-                                <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
-                                <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
-                            </div>
-                        </div>
-                    <?php } ?> 
-                    </li>
-
-                 
-                </ul>
-            </div>
+           
             <div class=" wrapper">
                 <div class="row">
                     <?php

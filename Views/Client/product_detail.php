@@ -1,4 +1,4 @@
- 
+<link rel="stylesheet" href="public/css/productdetail.css">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 
@@ -9,36 +9,6 @@ html {
     margin: 0;
     font-family: 'Sniglet', cursive;
 }
-
-
-/* Animation webkit
-
-@-webkit-keyframes myfirst {
-    0% {
-        margin-left: -235px;
-    }
-    90% {
-        margin-left: 100%;
-    }
-    100% {
-        margin-left: 100%;
-    }
-}
-
-
-Animation
-
-@keyframes myfirst {
-    0% {
-        margin-left: -235px;
-    }
-    70% {
-        margin-left: 100%;;
-    }
-    100% {
-        margin-left: 100%;
-    }
-} */
 
  header-body {
     height: 160px;

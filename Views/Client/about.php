@@ -1,4 +1,5 @@
-    <div class="body">
+<link rel="stylesheet" href="public/css/about.css">
+<div class="body">
         <div class="title-wrapper">
             <h3>Giới thiệu</h3>
         </div>

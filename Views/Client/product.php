@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="public/css/product.css">
     <div class="body">
         <div class="row">
             <div class="col-lg-2">
@@ -7,8 +8,6 @@
                     ?>
                     <a href="?redirect=product&category_id=<?=$item['category_id']?>"><?= $item['category_name'] ?></a>
                     <?php } ?>
-                
-                    
                 </div>
             </div>
         <div class="col-lg-10">

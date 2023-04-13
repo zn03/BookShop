@@ -10,12 +10,18 @@
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/index.css">
-    <link rel="stylesheet" href="public/css/about.css">
-    <link rel="stylesheet" href="public/css/cart.css">
-    <link rel="stylesheet" href="public/css/contact.css">
     <link rel="stylesheet" href="public/css/product.css">
     <link rel="stylesheet" href="public/css/productdetail.css">
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+    .body,
+    html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Sniglet', cursive;
+    scroll-behavior: smooth;
+}
     #myBtn {
     display: none;
     position: fixed;
@@ -36,9 +42,11 @@
         background-color: greenyellow;
     }
     body {
+    background-image: url(public/image/bg_pattern.jpg);
     scroll-behavior: smooth;
     grid-template-columns: auto 0px;
-}
+    }
+
     </style>
 </head>
 
