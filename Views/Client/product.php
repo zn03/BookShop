@@ -12,9 +12,12 @@
                 </div>
             </div>
         <div class="col-lg-10">
-            <div class=" wrapper">
-                    <h1><a class="product-cat text-decoration-none"> Thể loại:</a></h1>
-                 
+        <div class=" wrapper">
+                <?php
+                    foreach($arr['cate'] as $item){
+                ?>
+                    <h1><a class="product-cat text-decoration-none"> Thể loại: <?= $item['category_name']?></a></h1>
+                 <?php }?>
                  <br>
                 <div class="row">
                     <?php
@@ -27,7 +30,6 @@
                                             <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
                                                 <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
                                             </a>
-                                            <!-- <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now">Mua ngay</a> -->
                                         </div>
                                         <div class="product-info">
                                             <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
