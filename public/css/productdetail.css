@@ -1,14 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 
-/* .body,
-html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Sniglet', cursive;
-}
-
-
 /* Animation webkit */
 
 @-webkit-keyframes myfirst {
@@ -38,40 +29,9 @@ html {
     }
 }
 
-*/ header-body {
+header-body {
     height: 160px;
     background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
-}
-
-.fish {
-    background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
-    width: 235px;
-    height: 104px;
-    margin-left: -235px;
-    position: absolute;
-    animation: myfirst 24s;
-    -webkit-animation: myfirst 24s;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-}
-
-#fish {
-    top: 120px;
-}
-
-#fish2 {
-    top: 260px;
-    animation-delay: 12s;
-    -webkit-animation-delay: 12s;
-}
-
-#form {
-    height: 100%;
-    background-color: #98d4f3;
-    overflow: hidden;
-    position: relative;
 }
 
 .formgroup,

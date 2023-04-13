@@ -1,158 +1,5 @@
 <link rel="stylesheet" href="public/css/productdetail.css">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 
-.body,
-html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Sniglet', cursive;
-}
-
- header-body {
-    height: 160px;
-    background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
-}
-
-#form {
-    height: 100%;
-    background-color: #98d4f3;
-    overflow: hidden;
-    position: relative;
-}
-
-.formgroup,
-.formgroup-active,
-.formgroup-error {
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 10.5%;
-    transition: background-image 0.7s;
-    -webkit-transition: background-image 0.7s;
-    -moz-transition: background-image 0.7s;
-    -o-transition: background-image 0.7s;
-    width: 566px;
-    padding-top: 2px;
-}
-
-.formgroup {
-    background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');
-}
-
-.formgroup-active {
-    background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
-}
-
-.formgroup-error {
-    background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
-    color: red;
-}
-
-.button1 {
-    background-color: rgb(8, 101, 62);
-    color: aliceblue;
-    border: none;
-    padding: 15px 32px;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-
-/* POPUP BUTTON */
-
-* {
-    box-sizing: border-box;
-}
-
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-
-.open-button {
-    background-color: #0f9a1d;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-}
-
-
-/* The popup form - hidden by default */
-
-.form-popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-}
-
-
-/* Add styles to the form container */
-
-.form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-}
-
-
-/* Full-width input fields */
-
-.form-container input[type=text],
-.form-container input[type=number] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-}
-
-
-/* When the inputs get focus, do something */
-
-.form-container input[type=text]:focus,
-.form-container input[type=number] {
-    background-color: #ddd;
-    outline: none;
-}
-
-
-/* Set a style for the submit/login button */
-
-.form-container .butn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-
-/* Add a red background color to the cancel button */
-
-.form-container .cancel {
-    background-color: rgb(3, 87, 45);
-}
-
-
-/* Add some hover effects to buttons */
-
-.form-container .butn:hover,
-.open-button:hover {
-    opacity: 1;
-}
 </style>
  
     <div class="body">
@@ -164,7 +11,7 @@ html {
                     ?>
                     <div class="col-lg-3">
                         <a class="product-thumb" >
-                            <img width="275px" height="380px" src="public/product_image/<?= $item['product_image'] ?>"></a>
+                            <img style="margin-top: 15px;" width="275px" src="public/product_image/<?= $item['product_image'] ?>"></a>
                     </div>
                     <div class="col-lg-6">
                         <div class="card-body ml-4 text-decoration-none fs-4 text text-dark">
@@ -194,10 +41,9 @@ html {
                             <h3><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></h3>
                         </div>
                         <!-- POPUP FORM -->
-                        <!-- <button class="open-button" onclick="openForm()">Mua ngay</button> -->
-                        <div id="add-cart"><a href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a></div>
+                        <button class="open-button" onclick="openForm()">Mua ngay</button>
 
-                        <!-- <div class="form-popup" id="myForm">
+                        <div class="form-popup" id="myForm">
                             <form action="/action_page.php" class="form-container">
                                 <h2 style="color: forestgreen;">Mua ngay</h2>
                                 <label style="color: #04AA6D;" for="email"><b>Email</b></label>
@@ -212,8 +58,10 @@ html {
                                 <button type="submit" class="butn">Mua</button>
                                 <button type="button" class="butn cancel" onclick="closeForm()">Đóng</button>
                             </form>
-                        </div> -->
-                        <!-- <button class="button1" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button> -->
+                        </div>
+                        <button id="add-cart" class="button1">
+                            <a style="text-decoration:none; color:white;" href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a>
+                        </button>
                     </div>
                     <div class="detail " style="padding: 30px; ">
                         <div class="col-lg-12 col-md-12 col-sm-12">

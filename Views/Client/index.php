@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/">       
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/index.css">
-    <link rel="stylesheet" href="public/css/product.css">
-    <link rel="stylesheet" href="public/css/productdetail.css">
+    
     <style>
         @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
     .body,
@@ -22,11 +20,14 @@
     font-family: 'Sniglet', cursive;
     scroll-behavior: smooth;
 }
+    header {
+    background-image: url(public/image/headerbg.png);
+}
     #myBtn {
-    display: none;
+    display: flex;
     position: fixed;
     bottom: 10px;
-    right: 1450px;
+    margin-left: 10px;
     z-index: 99;
     font-size: 12px;
     border: none;
@@ -46,6 +47,16 @@
     scroll-behavior: smooth;
     grid-template-columns: auto 0px;
     }
+    #logo-img2 {
+    margin-top: 40px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .product-img:hover {
+    transition: 0.5s;
+    transform: translateY(-5%);
+}
 
     </style>
 </head>
@@ -55,20 +66,13 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-7 col-md-6 col-sm-12">
                     <a class="navbar-brand" href="index.php">
                         <img src="public/image/thiet-ke-logo-nha-sach-book-pink.png " width="250px" class="logo-img" alt="">
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                <img src="public/image/gop-y-vn.png" width="350px" alt="text">
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12"></div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <!-- <div class="search-wrapper">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div> -->
+                <img id="logo-img2" src="public/image/gop-y-vn.png" width="350px" alt="">
                 </div>
             </div>
         </div>
@@ -76,7 +80,7 @@
             <div class="wrapper">
                 <ul class="menu clearfix" list-style-type="none">
                     <li>
-                        <a >Danh mục sách</a>
+                        <a style=" cursor: pointer;">Danh mục sách</a>
                         <ul class="submenu" >
                             <?php
                                 foreach($arr['category'] as $item) {
@@ -91,7 +95,7 @@
             	            <a href="?redirect=cart">Giỏ hàng
                     </a> </li>
             
-                    <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
+                    <li class="show-mobile"  ><a style="cursor: pointer;">Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
                             <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng nhập</a></li>
                             <li class="menu item"><a href="index.php?controller=admin" style="background-color: #006400;" class="text-decoration-none">Admin</a></li>

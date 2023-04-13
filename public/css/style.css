@@ -13,7 +13,6 @@
 .body {
     padding: 0;
     line-height: 1.42857143;
-    font-family: Roboto, sans-serif;
     font-size: 14px;
     color: #555;
 }
@@ -109,7 +108,6 @@ footer {
 
 #mainnav .menu {
     text-align: justify;
-    height: 40px;
     line-height: 40px
 }
 

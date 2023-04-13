@@ -10,38 +10,38 @@
                     <?php } ?>
                 </div>
             </div>
-        <div class="col-lg-10">
-        <div class=" wrapper">
-                <?php
-                    foreach($arr['cate'] as $item){
-                ?>
-                    <h1><a class="product-cat text-decoration-none"> Thể loại: <?= $item['category_name']?></a></h1>
-                 <?php }?>
-                 <br>
-                <div class="row">
+            <div class="col-lg-10">
+                <div class=" wrapper">
                     <?php
-                        foreach ($arr['product'] as $item) {
+                        foreach($arr['cate'] as $item){
                     ?>
-                        <div class="col-3">
-                            <div class="products">
-                                    <div class="product-item">
-                                        <div class="product-top">
-                                            <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
-                                                <img width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
-                                            </a>
-                                        </div>
-                                        <div class="product-info">
-                                            <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
-                                            <br>
-                                           
-                                            <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
-                                        </div>
-                                    </div>                                                       
+                    <a class="product-cat" style="text-align: center; color:green;"> <h1>Thể loại: <?= $item['category_name']?></h1></a>
+                    <?php }?>
+                    <br>
+                    <div class="row">
+                        <?php
+                            foreach ($arr['product'] as $item) {
+                        ?>
+                            <div class="col-3">
+                                <div class="products">
+                                        <div class="product-item">
+                                            <div class="product-top">
+                                                <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
+                                                    <img class="product-img" width="250px" height="330px" src="public/product_image/<?= $item['product_image'] ?>">
+                                                </a>
+                                            </div>
+                                            <div class="product-info">
+                                                <a class="product-name text-decoration-none text-dark" href="?redirect=product&id=<?= $item['product_id']?>"><?= $item['product_name']?> </a>
+                                                <br>
+                                            
+                                                <div class="product-price"><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></div>
+                                            </div>
+                                        </div>                                                       
+                                </div>
                             </div>
-                        </div>
-                    <?php } ?>    
+                        <?php } ?>    
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
