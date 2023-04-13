@@ -11,6 +11,23 @@ function index() {
     $sql_prd_new = "SELECT * FROM product INNER JOIN category
     ON product.category_id = category.category_id ORDER BY product_id DESC LIMIT 8";
     $query_prd_new = mysqli_query($connect, $sql_prd_new);
+    if(isset($_SESSION['cart'])) {
+        foreach($_SESSION['cart'] as $prd_id => $value) {
+            // Tìm bản ghi cần thêm vào giỏ hàng
+            $sqlTemp = "SELECT * FROM product WHERE product_id = '$prd_id'";
+            $resultTemp = mysqli_query($connect, $sqlTemp);
+            if(isset($resultTemp)){
+                // Lặp mảng để lấy ra chi tiết từng bản ghi
+                foreach ($resultTemp as $each){
+                    $temp[$prd_id]['product_name'] = $each['product_name'];
+                    $temp[$prd_id]['product_price'] = $each['product_price'];
+                    $temp[$prd_id]['product_image'] = $each['product_image'];
+                    $temp[$prd_id]['product_quantity'] = $each['product_quantity'];
+                    $temp[$prd_id]['product_amount'] = $value;
+                }
+            }
+        }
+    }
     include_once('Config/close_connect.php');
     $arr = array();
     $arr['product'] = $query_product;
@@ -23,9 +40,6 @@ switch($redirect) {
     case '': $arr = index(); break;
     case 'about': $arr = index(); break;
     case 'contact': $arr = index(); break;
-    // case 'login' : $arr=index(); break;
-    // case 'product_detail': $arr = index(); break;
-    // case 'product': $arr = index(); break;
 
 }
 

@@ -61,9 +61,9 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
-
+                <img src="public/image/gop-y-vn.png" width="350px" alt="text">
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12"><img src="public/image/gop-y-vn.png" width="350px" alt="text"></div>
+                <div class="col-lg-3 col-md-6 col-sm-12"></div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <!-- <div class="search-wrapper">
                         <input type="text" placeholder="Tìm kiếm sản phẩm...">
@@ -87,7 +87,10 @@
                     </li>
                     <li class="show-mobile"><a href="?redirect=about">Giới thiệu</a></li>
                     <li class="show-mobile"><a href="?redirect=contact">Liên Hệ</a></li>
-                    <li class="show-mobile"><a href="?redirect=cart">Giỏ hàng</a></li>
+                    <li class="show-mobile">
+            	            <a href="?redirect=cart">Giỏ hàng
+                    </a> </li>
+            
                     <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
                             <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng nhập</a></li>

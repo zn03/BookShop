@@ -194,9 +194,10 @@ html {
                             <h3><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></h3>
                         </div>
                         <!-- POPUP FORM -->
-                        <button class="open-button" onclick="openForm()">Mua ngay</button>
+                        <!-- <button class="open-button" onclick="openForm()">Mua ngay</button> -->
+                        <div id="add-cart"><a href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a></div>
 
-                        <div class="form-popup" id="myForm">
+                        <!-- <div class="form-popup" id="myForm">
                             <form action="/action_page.php" class="form-container">
                                 <h2 style="color: forestgreen;">Mua ngay</h2>
                                 <label style="color: #04AA6D;" for="email"><b>Email</b></label>
@@ -211,7 +212,7 @@ html {
                                 <button type="submit" class="butn">Mua</button>
                                 <button type="button" class="butn cancel" onclick="closeForm()">Đóng</button>
                             </form>
-                        </div>
+                        </div> -->
                         <!-- <button class="button1" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button> -->
                     </div>
                     <div class="detail " style="padding: 30px; ">
