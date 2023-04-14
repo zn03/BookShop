@@ -108,6 +108,7 @@ footer {
 
 #mainnav .menu {
     text-align: justify;
+    height: 40px;
     line-height: 40px
 }
 
