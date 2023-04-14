@@ -11,55 +11,7 @@
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/cart.css">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
-    .body,
-    html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Sniglet', cursive;
-    scroll-behavior: smooth;
-}
-    header {
-    background-image: url(public/image/headerbg.png);
-}
-    #myBtn {
-    display: flex;
-    position: fixed;
-    bottom: 10px;
-    margin-left: 10px;
-    z-index: 99;
-    font-size: 12px;
-    border: none;
-    outline: none;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 5px;
-}
 
-    #myBtn:hover {
-        background-color: greenyellow;
-    }
-    body {
-    background-image: url(public/image/bg_pattern.jpg);
-    scroll-behavior: smooth;
-    grid-template-columns: auto 0px;
-    }
-    #logo-img2 {
-    margin-top: 40px;
-    }
-    a{
-        text-decoration: none;
-    }
-    .product-img:hover {
-    transition: 0.5s;
-    transform: translateY(-5%);
-}
-
-    </style>
 <body>
 
 <header>
@@ -71,14 +23,8 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                <img src="public/image/gop-y-vn.png" width="350px" alt="text">
+                <img id="logo-img2" src="public/image/gop-y-vn.png" width="350px" alt="">
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12"></div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <!-- <div class="search-wrapper">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div> -->
                 </div>
             </div>
         </div>
