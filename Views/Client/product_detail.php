@@ -11,7 +11,7 @@ body {
     background-color: #f9f9f9;
 
 }
-button {
+.comment-btn {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -22,9 +22,9 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-button:hover,
-button:focus,
-button:active {
+.comment-btn:hover,
+.comment-btn:focus,
+.comment-btn:active {
     cursor: pointer;
     background-color: #ecf0f1;
 }
@@ -195,25 +195,7 @@ details.comment:not([open]) .comment-heading::after {
                         <div class="product_price" style="background-color: rgb(8, 101, 62); margin-top: 30px; color: white;padding: 20px;">
                             <h3><p>Giá Bán: <span><?= number_format($item['product_price']); ?>đ</span></p></h3>
                         </div>
-                        <!-- POPUP FORM -->
-                        <button class="open-button" onclick="openForm()">Mua ngay</button>
-
-                        <div class="form-popup" id="myForm">
-                            <form action="/action_page.php" class="form-container">
-                                <h2 style="color: forestgreen;">Mua ngay</h2>
-                                <label style="color: #04AA6D;" for="email"><b>Email</b></label>
-                                <input type="text" placeholder="Điền email của bạn" name="email" required>
-
-                                <label style="color: #04AA6D;" for="sdt"><b>Số điện thoại</b></label>
-                                <input type="text" placeholder="Điền số điện thoại" name="sdt" required>
-
-                                <label style="color: #04AA6D;" for="quantity"><b>Số lượng sách</b></label>
-                                <input type="number" id="quantity" name="quantity" required>
-
-                                <button type="submit" class="butn">Mua</button>
-                                <button type="button" class="butn cancel" onclick="closeForm()">Đóng</button>
-                            </form>
-                        </div>
+                        
                         <button id="add-cart" class="button1">
                             <a style="text-decoration:none; color:white;" href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a>
                         </button>
@@ -259,11 +241,11 @@ details.comment:not([open]) .comment-heading::after {
         <summary>
             <div class="comment-heading">
                 <div class="comment-voting">
-                    <button type="button">
+                    <button class="comment-btn" type="button">
                         <span aria-hidden="true">&#9650;</span>
                         <span class="sr-only">Vote up</span>
                     </button>
-                    <button type="button">
+                    <button class="comment-btn" type="button">
                         <span aria-hidden="true">&#9660;</span>
                         <span class="sr-only">Vote down</span>
                     </button>
@@ -281,8 +263,8 @@ details.comment:not([open]) .comment-heading::after {
             <p>
                 Điều này thực sự tuyệt vời! Quyển sách này rất hay và nó chắc chắn sẽ giúp ích cho tôi trong tương lai. Cảm ơn!
             </p>
-            <button type="button">Like</button>
-            <button type="button">Dislike</button>
+            <button class="comment-btn" type="button">Like</button>
+            <button class="comment-btn" type="button">Dislike</button>
         </div>
 
         <div class="replies">
@@ -294,11 +276,11 @@ details.comment:not([open]) .comment-heading::after {
                 <summary>
                     <div class="comment-heading">
                         <div class="comment-voting">
-                            <button type="button">
+                            <button class="comment-btn" type="button">
                                 <span aria-hidden="true">&#9650;</span>
                                 <span class="sr-only">Vote up</span>
                             </button>
-                            <button type="button">
+                            <button class="comment-btn" type="button">
                                 <span aria-hidden="true">&#9660;</span>
                                 <span class="sr-only">Vote down</span>
                             </button>
@@ -316,8 +298,8 @@ details.comment:not([open]) .comment-heading::after {
                     <p>
                         Chắc *** gì đã hay?
                     </p>
-                    <button type="button">Like</button>
-                <button type="button">Dislike</button>
+                    <button class="comment-btn" type="button">Like</button>
+                <button class="comment-btn" type="button">Dislike</button>
                 </div>
             </details>
             <!-- Comment 2 end -->
@@ -330,11 +312,11 @@ details.comment:not([open]) .comment-heading::after {
                 <summary>
                     <div class="comment-heading">
                         <div class="comment-voting">
-                            <button type="button">
+                            <button class="comment-btn" type="button">
                                 <span aria-hidden="true">&#9650;</span>
                                 <span class="sr-only">Vote up</span>
                             </button>
-                            <button type="button">
+                            <button class="comment-btn" type="button">
                                 <span aria-hidden="true">&#9660;</span>
                                 <span class="sr-only">Vote down</span>
                             </button>
@@ -352,8 +334,8 @@ details.comment:not([open]) .comment-heading::after {
                     <p>
                         ??????
                     </p>
-                    <button type="button">Like</button>
-                    <button type="button">Dislike</button>
+                    <button class="comment-btn" type="button">Like</button>
+                    <button class="comment-btn" type="button">Dislike</button>
                 </div>
 
                 <div class="replies">
@@ -365,11 +347,11 @@ details.comment:not([open]) .comment-heading::after {
                         <summary>
                             <div class="comment-heading">
                                 <div class="comment-voting">
-                                    <button type="button">
+                                    <button class="comment-btn" type="button">
                                         <span aria-hidden="true">&#9650;</span>
                                         <span class="sr-only">Vote up</span>
                                     </button>
-                                    <button type="button">
+                                    <button class="comment-btn" type="button">
                                         <span aria-hidden="true">&#9660;</span>
                                         <span class="sr-only">Vote down</span>
                                     </button>
@@ -387,8 +369,8 @@ details.comment:not([open]) .comment-heading::after {
                             <p>
                                 Bạn đang vi phạm <a href="#rule-687">Quy tắc #687</a> với nhận xét đó. Xin vui lòng tránh đăng như thế này trong tương lai, hoặc tôi sẽ cấm bạn.
                             </p>
-                            <button type="button">Like</button>
-                            <button type="button">Dislike</button>
+                            <button class="comment-btn" type="button">Like</button>
+                            <button class="comment-btn" type="button">Dislike</button>
                         </div>
                     </details>
                     <!-- Comment 4 end -->
@@ -401,11 +383,11 @@ details.comment:not([open]) .comment-heading::after {
                         <summary>
                             <div class="comment-heading">
                                 <div class="comment-voting">
-                                    <button type="button">
+                                    <button class="comment-btn" type="button">
                                         <span aria-hidden="true">&#9650;</span>
                                         <span class="sr-only">Vote up</span>
                                     </button>
-                                    <button type="button">
+                                    <button class="comment-btn" type="button">
                                         <span aria-hidden="true">&#9660;</span>
                                         <span class="sr-only">Vote down</span>
                                     </button>
@@ -423,8 +405,8 @@ details.comment:not([open]) .comment-heading::after {
                             <p>
                                +1 vote ban
                             </p>
-                            <button type="button">Like</button>
-                             <button type="button">Dislike</button>
+                            <button class="comment-btn" type="button">Like</button>
+                             <button class="comment-btn" type="button">Dislike</button>
                         </div>
                     </details>
                     <!-- Comment 5 end -->
@@ -437,11 +419,11 @@ details.comment:not([open]) .comment-heading::after {
                         <summary>
                             <div class="comment-heading">
                                 <div class="comment-voting">
-                                    <button type="button">
+                                    <button class="comment-btn" type="button">
                                         <span aria-hidden="true">&#9650;</span>
                                         <span class="sr-only">Vote up</span>
                                     </button>
-                                    <button type="button">
+                                    <button class="comment-btn" type="button">
                                         <span aria-hidden="true">&#9660;</span>
                                         <span class="sr-only">Vote down</span>
                                     </button>
@@ -459,8 +441,8 @@ details.comment:not([open]) .comment-heading::after {
                             <p>
                                 +2 vote ban
                             </p>
-                            <button type="button">Like</button>
-                            <button type="button">Dislike</button>
+                            <button class="comment-btn" type="button">Like</button>
+                            <button class="comment-btn" type="button">Dislike</button>
                         </div>
                     </details>
                     <!-- Comment 6 end -->
