@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/cart.css">
 
-<body>
+    <body>
 
-<header>
+    <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12">

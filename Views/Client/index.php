@@ -20,9 +20,6 @@
     font-family: 'Sniglet', cursive;
     scroll-behavior: smooth;
 }
-    header {
-    background-image: url(public/image/headerbg.png);
-}
     #myBtn {
     display: flex;
     position: fixed;
