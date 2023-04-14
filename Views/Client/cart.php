@@ -14,8 +14,8 @@
             background-image: url(public/image/headerbg.png);
         }
         body {
-        background-image: url(public/image/bg_pattern.jpg); 
-}
+            background-image: url(public/image/bg_pattern.jpg); 
+        }
     </style>
 </head>
 <body>
@@ -23,7 +23,7 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-7 col-md-6 col-sm-12">
                     <a class="navbar-brand" href="index.php">
                         <img src="public/image/thiet-ke-logo-nha-sach-book-pink.png " width="250px" class="logo-img" alt="">
                     </a>
@@ -126,7 +126,7 @@
                                     <input type="number" id="quantity" name="qtt[<?= $productID ?>]" class="form-control form-blue quantity" value="<?= $item['product_amount'] ?>" min="1" max="<?= $item['product_quantity'] ?>">
                                 </div>
                                 <div class="cart-price col-lg-2 col-md-3 col-sm-12"><h4><?= number_format($item['product_price']); ?>đ</h4></div>
-                                <div class="cart-price col-lg-3 col-md-3 col-sm-12"><h4><b><?= number_format($total_price); ?>đ</b></h4><a class="btn btn-danger" href="?redirect=cart&action=del&id=<?= $productID ?>">Xóa</a></div>
+                                <div class="cart-price col-lg-3 col-md-3 col-sm-12"><h4><b><?= number_format($total_price); ?>đ</b></h4><a id="btn-delete" class="btn btn-danger" href="?redirect=cart&action=del&id=<?= $productID ?>">Xóa</a></div>
                             </div>
                         <?php } ?>
                         <div class="row">
