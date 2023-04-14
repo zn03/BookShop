@@ -11,8 +11,10 @@
 }
 
 .body {
+    background-image: url(image/bg_pattern.jpg);
     padding: 0;
     line-height: 1.42857143;
+    font-family: Roboto, sans-serif;
     font-size: 14px;
     color: #555;
 }
@@ -151,7 +153,7 @@ footer {
 #mainnav .menu>li .submenu:hover {
     background-color: #006400;
     box-shadow: #24bb77;
-    display: none;
+    /* display: none; */
     left: 0;
     position: absolute;
     top: 40px;
@@ -207,57 +209,4 @@ footer {
 
 .input {
     width: 300px;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
-.body,
-html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Sniglet', cursive;
-    scroll-behavior: smooth;
-}
-
-header {
-    background-image: url(public/image/headerbg.png);
-}
-
-#myBtn {
-    display: flex;
-    position: fixed;
-    bottom: 10px;
-    margin-left: 10px;
-    z-index: 99;
-    font-size: 12px;
-    border: none;
-    outline: none;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-#myBtn:hover {
-    background-color: greenyellow;
-}
-
-body {
-    background-image: url(public/image/bg_pattern.jpg);
-    scroll-behavior: smooth;
-    grid-template-columns: auto 0px;
-}
-
-#logo-img2 {
-    margin-top: 40px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.product-img:hover {
-    transition: 0.5s;
-    transform: translateY(-5%);
 }
