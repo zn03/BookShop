@@ -1,6 +1,5 @@
 #my-cart,
 #customer {
-    background: #FFF;
     border-radius: 3px;
     margin-top: 20px;
 }
@@ -81,7 +80,7 @@
     border-radius: 3px;
     text-decoration: none;
     border: 1px solid #EB1F27;
-    transition: background 0.2s;
+    transition: 0.2s;
 }
 
 .by-now b,
@@ -127,6 +126,7 @@
 }
 
 #update-cart {
+    margin-top: 40px;
     border-radius: 3px;
     border: 1px solid #305eb3;
     background: #305eb3;
@@ -134,9 +134,23 @@
     color: #FFF;
 }
 
+#continue-cart {
+    margin-top: 40px;
+    border-radius: 3px;
+    border: 1px solid #1e9831;
+    background: #1e9831;
+    padding: 15px 20px;
+    color: #FFF;
+}
+
 #update-cart:hover {
     background: #FFFFFF;
     color: #305eb3;
+}
+
+#continue-cart:hover {
+    background: #FFFFFF;
+    color: #1e9831;
 }
 
 #logo-img2 {
@@ -147,6 +161,8 @@ a {
     text-decoration: none;
 }
 
-header {
-    background-image: url(public/image/headerbg.png);
+.information-customer {
+    margin-top: 30px;
+    text-align: center;
+    color: green;
 }

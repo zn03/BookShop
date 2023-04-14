@@ -1,5 +1,3 @@
-    <div id="body">
-        <div id="my-cart">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +9,16 @@
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/cart.css">
-
-    <body>
+    <style>
+        header{
+            background-image: url(public/image/headerbg.png);
+        }
+        body {
+        background-image: url(public/image/bg_pattern.jpg); 
+}
+    </style>
+</head>
+<body>
 
     <header>
         <div class="container">
@@ -57,7 +63,7 @@
                         echo 0;
                     }
                     ?>
-                </span></a> </li>
+                </a> </li>
             
                     <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
@@ -71,7 +77,7 @@
     </header>
 
 <!--	Body	-->
-<div id="body">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -98,7 +104,7 @@
                 <!--	Cart	-->
                 <div id="my-cart">
                     <div class="row">
-                        <div class="cart-nav-item col-lg-6 col-md-7 col-sm-12">Thông tin sản phẩm</div>
+                        <div class="cart-nav-item col-lg-5 col-md-4 col-sm-12">Thông tin sản phẩm</div>
                         <div class="cart-nav-item col-lg-2 col-md-2 col-sm-12">Số lượng</div>
                         <div class="cart-nav-item col-lg-2 col-md-3 col-sm-12">Giá</div>
                         <div class="cart-nav-item col-lg-2 col-md-3 col-sm-12">Tổng cộng</div>
@@ -111,7 +117,7 @@
                             $total_price_all += $total_price; // Tính tổng tiền sản phẩm trong giỏ hành
                         ?>
                             <div class="cart-item row">
-                                <div class="cart-thumb col-lg-6 col-md-7 col-sm-12">
+                                <div class="cart-thumb col-lg-5 col-md-4 col-sm-12">
                                     <img src="public/product_image/<?= $item['product_image'] ?>">
                                     <h4><?= $item['product_name'] ?></h4>
                                 </div>
@@ -120,13 +126,13 @@
                                     <input type="number" id="quantity" name="qtt[<?= $productID ?>]" class="form-control form-blue quantity" value="<?= $item['product_amount'] ?>" min="1" max="<?= $item['product_quantity'] ?>">
                                 </div>
                                 <div class="cart-price col-lg-2 col-md-3 col-sm-12"><h4><?= number_format($item['product_price']); ?>đ</h4></div>
-                                <div class="cart-price col-lg-2 col-md-3 col-sm-12"><h4><b><?= number_format($total_price); ?>đ</b></h4><a class="btn btn-danger" href="?redirect=cart&action=del&id=<?= $productID ?>">Xóa</a></div>
+                                <div class="cart-price col-lg-3 col-md-3 col-sm-12"><h4><b><?= number_format($total_price); ?>đ</b></h4><a class="btn btn-danger" href="?redirect=cart&action=del&id=<?= $productID ?>">Xóa</a></div>
                             </div>
                         <?php } ?>
                         <div class="row">
                             <div class="cart-thumb col-lg-7 col-md-7 col-sm-12">
                                 <button id="update-cart" class="btn btn-success" type="submit" name="sbm">Cập nhật giỏ hàng</button>
-                                <button class="btn btn-success" href="index.php" >Tiếp tục mua hàng</button>
+                                <button id="continue-cart" class="btn btn-success" href="index.php" >Tiếp tục mua hàng</button>
                             </div>
                             <div class="cart-total col-lg- col-md-2 col-sm-12"><b>Tổng cộng:</b></div>
                             <div class="cart-price col-lg-3 col-md-3 col-sm-12"><b><?= number_format($total_price_all); ?>đ</b></div>
@@ -140,11 +146,11 @@
                 <?php }else {
                     echo '<div class="alert alert-danger mt-3">Giỏ hàng của bạn hiện không có sản phẩm nào !</div>';
                 } ?>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+        <h1 class="information-customer">Thông tin cá nhân</h1>
         <div id="customer">
             <form method="post">
                 <div class="row">
@@ -180,7 +186,7 @@
             </div>
         </div>
     </div>
-
+</body>
     <footer>
         <div class="footer-top">
             <li>
@@ -266,4 +272,3 @@
         </div>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon style="font-size: 32px;" name="arrow-up-outline"></ion-icon></button>
     </footer>
-    

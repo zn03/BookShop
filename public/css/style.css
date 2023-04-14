@@ -4,11 +4,7 @@
     display: block;
 }
 
-header {
-    background-image: url(public/image/headerbg.png);
-}
-
-.body {
+body {
     background-image: url(public/image/bg_pattern.jpg);
     padding: 0;
     line-height: 1.42857143;
