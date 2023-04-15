@@ -48,7 +48,7 @@
                 <!--	Cart	-->
                 <div id="my-cart">
                     <div class="row">
-                        <div class="cart-nav-item col-lg-5 col-md-2 col-sm-12">Thông tin sản phẩm</div>
+                        <div class="cart-nav-item col-lg-5 col-md-2 col-sm-12">Sản phẩm</div>
                         <div class="cart-nav-item col-lg-2 col-md-1 col-sm-12">Số lượng</div>
                         <div class="cart-nav-item col-lg-2 col-md-2 col-sm-12">Giá</div>
                         <div class="cart-nav-item col-lg-3 col-md-1 col-sm-12">Tổng cộng</div>
@@ -58,7 +58,7 @@
                         $total_price_all = 0;
                         foreach ($arr['product'] as $productID => $item) {
                             $total_price = $item['product_amount'] * $item["product_price"];
-                            $total_price_all += $total_price; // Tính tổng tiền sản phẩm trong giỏ hành
+                            $total_price_all += $total_price; // Tính tổng tiền sản phẩm trong giỏ hàng
                         ?>
                             <div class="cart-item row">
                                 <div class="cart-thumb col-lg-2 col-md-7 col-sm-12">

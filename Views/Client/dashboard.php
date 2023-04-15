@@ -39,7 +39,7 @@
                                             <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
                                                 <img class="product-img" width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
                                             </a>
-                                            <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now"><h4>Xem thêm</h4></a>
+                                            <!-- <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now"><h4>Xem thêm</h4></a> -->
                                         </div>
                                         <div class="product-info">
                                             <span class="product-name text-decoration-none text-dark" href=""><h5><?= $item['product_name']?> </h5></span>
@@ -68,7 +68,7 @@
                                             <a class="product-thumb" href="?redirect=product_detail&id=<?= $item['product_id'] ?>">
                                                 <img class="product-img" width="250px" height="350px" src="public/product_image/<?= $item['product_image'] ?>">
                                             </a>
-                                            <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now"><h4>Mua ngay</h4></a>
+                                            <!-- <a href="?redirect=product_detail&id=<?= $item['product_id'] ?>" class="buy-now"><h4>Mua ngay</h4></a> -->
                                         </div>
                                         <div class="product-info">
                                             <span class="product-name text-decoration-none text-dark" href=""><?= $item['product_name']?> </span>

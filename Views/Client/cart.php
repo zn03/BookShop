@@ -13,9 +13,9 @@
         header{
             background-image: url(public/image/headerbg.png);
         }
-        body {
+        /* body {
             background-image: url(public/image/bg_pattern.jpg); 
-        }
+        } */
     </style>
 </head>
 <body>
