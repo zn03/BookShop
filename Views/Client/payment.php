@@ -1,7 +1,7 @@
 <div class="body">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="infocustomer col-lg-7">
+            <div class="infocustomer col-lg-5">
                 <div class="container">
                         <form method="post" enctype="multipart/form-data" action="">
                             <div class="text-dark">

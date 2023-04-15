@@ -80,7 +80,7 @@
     border-radius: 3px;
     text-decoration: none;
     border: 1px solid #EB1F27;
-    transition: background 0.2s;
+    transition: 0.2s;
 }
 
 .by-now b,
