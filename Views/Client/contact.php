@@ -1,4 +1,5 @@
-    <div class="body">
+<link rel="stylesheet" href="public/css/contact.css">
+   <div class="body">
         
         <div class="col col-ld-4"></div>
         <div class="col col-ld-4">

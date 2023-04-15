@@ -9,26 +9,28 @@
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/cart.css">
-
+    <style>
+        header{
+            background-image: url(public/image/headerbg.png);
+        }
+        body {
+            background-image: url(public/image/bg_pattern.jpg); 
+        }
+    </style>
+</head>
 <body>
 
-<header>
+    <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-7 col-md-6 col-sm-12">
                     <a class="navbar-brand" href="index.php">
                         <img src="public/image/thiet-ke-logo-nha-sach-book-pink.png " width="250px" class="logo-img" alt="">
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                <img src="public/image/gop-y-vn.png" width="350px" alt="text">
+                <img id="logo-img2" src="public/image/gop-y-vn.png" width="350px" alt="">
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12"></div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <!-- <div class="search-wrapper">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -61,7 +63,7 @@
                         echo 0;
                     }
                     ?>
-                </span></a> </li>
+                </a> </li>
             
                     <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
@@ -76,7 +78,7 @@
     </header>
 
 <!--	Body	-->
-<div id="body">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -149,6 +151,7 @@
                 <?php }else {
                     echo '<div class="alert alert-danger mt-3">Giỏ hàng của bạn hiện không có sản phẩm nào !</div>';
                 } ?>
+                </div>
             </div>
         </div>
     </div>
@@ -168,7 +171,7 @@
             </div>
         
     </div>
-
+</body>
     <footer>
         <div class="footer-top">
             <li>
@@ -254,4 +257,3 @@
         </div>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon style="font-size: 32px;" name="arrow-up-outline"></ion-icon></button>
     </footer>
-    

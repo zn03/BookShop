@@ -1,14 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
 
-/* .body,
-html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Sniglet', cursive;
-}
-
-
 /* Animation webkit */
 
 @-webkit-keyframes myfirst {
@@ -38,40 +29,9 @@ html {
     }
 }
 
-*/ header-body {
+header-body {
     height: 160px;
     background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
-}
-
-.fish {
-    background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
-    width: 235px;
-    height: 104px;
-    margin-left: -235px;
-    position: absolute;
-    animation: myfirst 24s;
-    -webkit-animation: myfirst 24s;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-}
-
-#fish {
-    top: 120px;
-}
-
-#fish2 {
-    top: 260px;
-    animation-delay: 12s;
-    -webkit-animation-delay: 12s;
-}
-
-#form {
-    height: 100%;
-    background-color: #98d4f3;
-    overflow: hidden;
-    position: relative;
 }
 
 .formgroup,
@@ -112,96 +72,182 @@ html {
     margin-top: 10px;
 }
 
-
-/* POPUP BUTTON */
-
 * {
     box-sizing: border-box;
 }
 
+body {
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #f9f9f9;
+}
 
-/* Button used to open the contact form - fixed at the bottom of the page */
+.comment-btn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    padding: 4px 8px;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
 
-.open-button {
-    background-color: #0f9a1d;
-    color: white;
-    padding: 16px 20px;
-    border: none;
+.comment-btn:hover,
+.comment-btn:focus,
+.comment-btn:active {
     cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
+    background-color: #ecf0f1;
+}
+
+.comment-thread {
+    width: 1100px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 30px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    /* Removes margin collapse */
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 
-/* The popup form - hidden by default */
+/* Comment */
 
-.form-popup {
+.comment {
+    position: relative;
+    margin: 20px auto;
+}
+
+.comment-heading {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+}
+
+.comment-voting {
+    width: 20px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.comment-voting button {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    border: 0;
+    font-size: 10px;
+}
+
+.comment-info {
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+}
+
+.comment-author {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.comment-author:hover {
+    text-decoration: underline;
+}
+
+.replies {
+    margin-left: 20px;
+}
+
+
+/* Adjustments for the comment border links */
+
+.comment-border-link {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 12px;
+    height: calc(100% - 50px);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+}
+
+.comment-border-link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.comment-body {
+    padding: 0 20px;
+    padding-left: 28px;
+}
+
+.replies {
+    margin-left: 28px;
+}
+
+
+/* Adjustments for toggleable comments */
+
+details.comment summary {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+
+details.comment summary::-webkit-details-marker {
     display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
+}
+
+details.comment:not([open]) .comment-heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comment-heading::after {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    align-self: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+details.comment[open] .comment-heading::after {
+    content: "Nhấn để ẩn";
+}
+
+details.comment:not([open]) .comment-heading::after {
+    content: "Nhấn để mở";
 }
 
 
-/* Add styles to the form container */
+/* Adjustment for Internet Explorer */
 
-.form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-}
-
-
-/* Full-width input fields */
-
-.form-container input[type=text],
-.form-container input[type=number] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-}
-
-
-/* When the inputs get focus, do something */
-
-.form-container input[type=text]:focus,
-.form-container input[type=number] {
-    background-color: #ddd;
-    outline: none;
-}
-
-
-/* Set a style for the submit/login button */
-
-.form-container .butn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-
-/* Add a red background color to the cancel button */
-
-.form-container .cancel {
-    background-color: rgb(3, 87, 45);
-}
-
-
-/* Add some hover effects to buttons */
-
-.form-container .butn:hover,
-.open-button:hover {
-    opacity: 1;
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    /* Resets cursor, and removes prompt text on Internet Explorer */
+    .comment-heading {
+        cursor: default;
+    }
+    details.comment[open] .comment-heading::after,
+    details.comment:not([open]) .comment-heading::after {
+        content: " ";
+    }
 }
