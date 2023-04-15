@@ -66,8 +66,8 @@
                         <span>Products  </span>
                     </a>
 
-                    <a class="list-group-item " href="#">
-                        <i class="fa-solid fa-basket-shopping"></i>
+                    <a class="list-group-item" href="index.php?controller=admin&redirect=order">
+                        <i class="fa-solid fa-bag-shopping"></i>
                         <span>Order </span>
                     </a>
                 </ul>

@@ -28,7 +28,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="index.php?controller=login&action=logout">
-                            <i class="fa-solid fa-right-from-bracket"></i>Logout
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout
                             </a>
                         </li>
                     </ul>
@@ -45,7 +45,7 @@
                     </div>
                 </form>
                 <ul class=" list-group list-group-flush">
-                    <a class="list-group-item active" aria-current="true" href="index.php?controller=admin">
+                    <a class="list-group-item " aria-current="true" href="index.php?controller=admin">
                         <i class="fa-solid fa-gauge"></i>
                         <span>Dashboard</span>
                     </a>
@@ -55,80 +55,52 @@
                         <span>User</span>
                     </a>
 
-                    <a class="list-group-item" href="index.php?controller=admin&redirect=category">
+                    <a class="list-group-item " href="index.php?controller=admin&redirect=category">
                         <i class="fa-solid fa-list"></i>
                         <span>Categories</span>
                     </a>
 
-                    <a class="list-group-item  " href="index.php?controller=admin&redirect=product">
+                    <a class="list-group-item " href="index.php?controller=admin&redirect=product">
                         <i class="fa-solid fa-basket-shopping"></i>
                         <span>Products  </span>
                     </a>
 
-                    <a class="list-group-item " href="index.php?controller=admin&redirect=order">
+                    <a class="list-group-item active" href="index.php?controller=admin&redirect=order">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <span>Order </span>
-                    </a>
+                     </a>
                 </ul>
             </div>
 
-
-        <div class="page-wrapper col-sm-10 col-lg-6 sidebar">
-            <div class="container-fluid">
-                <div class="row">
-                    <h1 class="page-header">HOME ADMINISTRATION</h1>
+            <div class="page-wrapper col-sm-10 col-lg-6 sidebar">
+                <div class="container-fluid">
+                    <div id="toolbar">
+                        <h1 align="center">Sửa trạng thái đơn hàng</h1>
+                    </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <div class="widget-left">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                            <div class="widget-right">
-                                <span>120</span>
-                                <span>Products</span>
-                            </div>
+                <div class="container">
+                    <?php
+                        foreach($record as $item){
+                     ?>
+                    <form method="post" enctype="multipart/form-data" action="?controller=admin&redirect=category&action=update">
+                        <input type="hidden" name="category_id" value="<?= $item['category_id'];?>">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Tên danh mục</label>
+                            <input type="text" class="form-control" id="category_name" name="category_name" value="<?= $item['category_name'];?>">
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <div class="widget-left comment">
-                                <i class="fa-solid fa-comment"></i>
-                            </div>
-                            <div class="widget-right">
-                                <span>70</span>
-                                <span>Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <div class="widget-left user">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <div class="widget-right">
-                                <span>10</span>
-                                <span>User</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <div class="widget-left ads">
-                                <i class="fa-sharp fa-solid fa-rectangle-ad"></i>
-                            </div>
-                            <div class="widget-right">
-                                <span>20</span>
-                                <span>Ads</span>
-                            </div>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Sửa</button>
+                        <a href="?controller=admin&redirect=category" class="btn btn-warning"> Trở về Trang danh mục</a>
+                    </form>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>
     </div>
     <script src="public/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
 </body>
+
 
 </html>

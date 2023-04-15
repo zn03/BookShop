@@ -82,11 +82,13 @@
                     <li class="show-mobile"><a href="?redirect=contact">Liên Hệ</a></li>
                     <li class="show-mobile">
             	            <a href="?redirect=cart">Giỏ hàng
+                                
                     </a> </li>
             
                     <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
                             <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng nhập</a></li>
+                            <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng ký</a></li>
                             <li class="menu item"><a href="index.php?controller=admin" style="background-color: #006400;" class="text-decoration-none">Admin</a></li>
                         </ul>
                     </li>
@@ -114,8 +116,8 @@
                 case 'product' :
                     include_once('Views/Client/product.php');    
                     break;
-                case 'login' :
-                    include_once('Views/login-logout/login.php');
+                case 'payment' :
+                    include_once('Views/Client/payment.php');
                     break;    
             }
         } else{

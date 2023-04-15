@@ -30,6 +30,11 @@ if($redirect == '') {
             require_once('Views/Client/index.php');
             require_once('Views/Client/contact.php');
             ; break ;    
+        case 'payment':
+            require_once('Model/Client/Payment/payment_model.php');
+            require_once('Views/Client/index.php');
+            require_once('Views/Client/payment.php');
+            ; break ;    
                    
     }
 }

@@ -20,7 +20,7 @@
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i>
-                        <span>User</span>
+                        <span>Admin</span>
                     </button>
                     <ul class="dropdown-menu">
                         <li>
@@ -67,8 +67,8 @@
                         <span>Products  </span>
                     </a>
 
-                    <a class="list-group-item " href="#">
-                        <i class="fa-solid fa-basket-shopping"></i>
+                    <a class="list-group-item" href="index.php?controller=admin&redirect=order">
+                        <i class="fa-solid fa-bag-shopping"></i>
                         <span>Order </span>
                     </a>
                 </ul>

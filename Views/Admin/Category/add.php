@@ -27,12 +27,14 @@
                     <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item" href="#">
-                                <i class="fa-solid fa-user"></i> My profile
+                                <i class="fa-solid fa-user"></i> 
+                                <span>My profile</span>
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="index.php?controller=login&action=logout">
-                            <i class="fa-solid fa-right-from-bracket"></i>Logout
+                            <a class="list-group-item" href="index.php?controller=admin&redirect=order">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Order </span>
                             </a>
                         </li>
                     </ul>

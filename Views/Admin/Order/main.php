@@ -51,7 +51,7 @@
                         <span>Dashboard</span>
                     </a>
 
-                    <a class="list-group-item active" href="index.php?controller=admin&redirect=user">
+                    <a class="list-group-item " href="index.php?controller=admin&redirect=user">
                         <i class="fa-solid fa-user"></i>
                         <span>User</span>
                     </a>
@@ -66,7 +66,7 @@
                         <span>Products  </span>
                     </a>
 
-                    <a class="list-group-item" href="index.php?controller=admin&redirect=order">
+                    <a class="list-group-item active" href="index.php?controller=admin&redirect=order">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <span>Order </span>
                     </a>
@@ -76,11 +76,7 @@
             <div class="page-wrapper col-sm-10 col-lg-6 sidebar">
                 <div class="container-fluid">
                     <div class="row">
-                        <h1 class="page-header">Quản Lý Người Dùng</h1>
-                    </div>
-                    <div id="toolbar">
-                        <a href="index.php?controller=admin&redirect=user&action=create" class="btn btn-success">
-                            <i class="glyphicon glyphicon-plus"></i> Thêm người dùng</a>
+                        <h1 class="page-header">Quản Lý Đơn Hàng</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -90,12 +86,15 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col ">#</th>
-                                            <th data-field="name" data-sortable="true" scope="col ">Tên</th>
-                                            <th scope="col ">Tên người dùng</th>
-                                            <th scope="col ">Email</th>
+                                            <th scope="col ">ID</th>
+                                            <th data-field="name" data-sortable="true" scope="col ">Tên khách hàng</th>
                                             <th scope="col ">Số điện thoại</th>
-                                            <th scope="col ">Hành Động</th>
+                                            <th scope="col ">Email</th>
+                                            <th scope="col ">Địa chỉ</th>
+                                            <th scope="col ">Trạng thái đơn hàng </th>
+                                            <th scope="col "> Ngày đặt </th>
+                                            <th scope="col "> Tổng tiền </th>
+                                            <th scope="col "> Tùy chọn </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -105,12 +104,15 @@
                                         ?>
                                             <tr>
                                                 <th scope="row"><?= $stt?></th>
-                                                <td><?= $item['fullname']?></td>
-                                                <td><?= $item['user_name']?></td>
-                                                <td><?= $item['user_email']?></td>
-                                                <td><?= $item['user_phone']?></td>
-                                                <td><a href="index.php?controller=admin&redirect=user&action=edit&id=<?= $item['user_id'];?>" class="btn btn-info">Edit</a></td>
-                                                <td><a href="index.php?controller=admin&redirect=user&action=destroy&id=<?= $item['user_id'];?> " class="btn btn-danger">Delete</a></td>
+                                                <td><?= $item['customer_name']?></td>
+                                                <td><?= $item['customer_phone']?></td>
+                                                <td><?= $item['customer_email']?></td>
+                                                <td><?= $item['customer_address']?></td>
+                                                <td><?= $item['order_status']?></td>
+                                                <td><?= $item['order_date']?></td>
+                                                <td><?= $item['total_price']?></td>
+                                                <td><a href="index.php?controller=admin&redirect=order_detail&id=<?= $item['order_id'] ?>" class="btn btn-info">Chi tiết</a></td>
+                                                
                                             </tr>
                                             <?php
                                              $stt++;

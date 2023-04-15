@@ -78,10 +78,10 @@
     text-align: center;
     display: inline-table;
     padding: 10px 30px;
-    background: #EB1F27;
+    background: #305eb3;
     border-radius: 3px;
     text-decoration: none;
-    border: 1px solid #EB1F27;
+    border: 1px solid #305eb3;
     transition: background 0.2s;
 }
 
@@ -95,8 +95,8 @@
 }
 
 .by-now:last-child a {
-    background: #305eb3;
-    border: 1px solid #305eb3;
+    background: #EB1F27;
+    border: 1px solid
 }
 
 .by-now a:hover {
@@ -104,19 +104,19 @@
 }
 
 .by-now a:hover b {
-    color: #EB1F27;
+    color: #305eb3;
 }
 
 .by-now a:hover span {
-    color: #EB1F27;
+    color: #305eb3;
 }
 
 .by-now:last-child a:hover b {
-    color: #305eb3;
+    color: #EB1F27;
 }
 
 .by-now:last-child a:hover span {
-    color: #305eb3;
+    color: #EB1F27;
 }
 
 .by-now:first-child {

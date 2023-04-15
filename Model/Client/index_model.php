@@ -40,6 +40,7 @@ switch($redirect) {
     case '': $arr = index(); break;
     case 'about': $arr = index(); break;
     case 'contact': $arr = index(); break;
+    case 'payment': $arr = index(); break;
 
 }
 

@@ -66,6 +66,7 @@
                     <li class="show-mobile"  ><a>Đăng nhập/Đăng ký</a></i>
                         <ul class="submenu">
                             <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng nhập</a></li>
+                            <li class="menu item"><a href="" style="background-color: #006400;" class="text-decoration-none">Đăng ký</a></li>
                             <li class="menu item"><a href="index.php?controller=admin" style="background-color: #006400;" class="text-decoration-none">Admin</a></li>
                         </ul>
                     </li>
@@ -102,10 +103,10 @@
                 <!--	Cart	-->
                 <div id="my-cart">
                     <div class="row">
-                        <div class="cart-nav-item col-lg-6 col-md-7 col-sm-12">Thông tin sản phẩm</div>
+                        <div class="cart-nav-item col-lg-5 col-md-7 col-sm-12">Thông tin sản phẩm</div>
                         <div class="cart-nav-item col-lg-2 col-md-2 col-sm-12">Số lượng</div>
                         <div class="cart-nav-item col-lg-2 col-md-3 col-sm-12">Giá</div>
-                        <div class="cart-nav-item col-lg-2 col-md-3 col-sm-12">Tổng cộng</div>
+                        <div class="cart-nav-item col-lg-3 col-md-3 col-sm-12">Tổng cộng</div>
                     </div>
                     <form method="post" action="?redirect=<?= $redirect ?>&action=update">
                         <?php
@@ -115,7 +116,7 @@
                             $total_price_all += $total_price; // Tính tổng tiền sản phẩm trong giỏ hành
                         ?>
                             <div class="cart-item row">
-                                <div class="cart-thumb col-lg-6 col-md-7 col-sm-12">
+                                <div class="cart-thumb col-lg-5 col-md-7 col-sm-12">
                                     <img src="public/product_image/<?= $item['product_image'] ?>">
                                     <h4><?= $item['product_name'] ?></h4>
                                 </div>
@@ -123,19 +124,23 @@
                                 <div class="cart-quantity col-lg-2 col-md-2 col-sm-12">
                                     <input type="number" id="quantity" name="qtt[<?= $productID ?>]" class="form-control form-blue quantity" value="<?= $item['product_amount'] ?>" min="1" max="<?= $item['product_quantity'] ?>">
                                 </div>
-                                <div class="cart-price col-lg-2 col-md-3 col-sm-12"><h4><?= number_format($item['product_price']); ?>đ</h4></div>
-                                <div class="cart-price col-lg-2 col-md-3 col-sm-12"><h4><b><?= number_format($total_price); ?>đ</b></h4><a class="btn btn-danger" href="?redirect=cart&action=del&id=<?= $productID ?>">Xóa</a></div>
+                                <div class="cart-price col-lg-2 col-md-3 col-sm-12"><h5><?= number_format($item['product_price']); ?>đ</h5></div>
+                                <div class="cart-price col-lg-3 col-md-3 col-sm-12"><h4><p><?= number_format($total_price); ?>đ</ơ></h4>
+                                    <a class="btn btn-danger" style="float: right; margin-top: -50px" href="?redirect=cart&action=del&id=<?= $productID ?>">Xóa</a>
+                                    
+                            </div>
                             </div>
                         <?php } ?>
                         <div class="row">
                             <div class="cart-thumb col-lg-7 col-md-7 col-sm-12">
                                 <button id="update-cart" class="btn btn-success" type="submit" name="sbm">Cập nhật giỏ hàng</button>
-                                <button class="btn btn-success" href="index.php" >Tiếp tục mua hàng</button>
+                                
                             </div>
-                            <div class="cart-total col-lg- col-md-2 col-sm-12"><b>Tổng cộng:</b></div>
-                            <div class="cart-price col-lg-3 col-md-3 col-sm-12"><b><?= number_format($total_price_all); ?>đ</b></div>
+                            <div class="cart-total col-lg-2 col-md-2 col-sm-12"><b  style="font-size: 20px;">Tổng cộng:</b></div>
+                            <div class="cart-price col-lg-3 col-md-3 col-sm-12"><b style="font-size: 30px;"><?= number_format($total_price_all); ?>đ</b></div>
                         </div>
                     </form>
+                    
 
                 </div>
                 <!--	End Cart	-->
@@ -149,40 +154,19 @@
     </div>
 </div>
 
-        <div id="customer">
-            <form method="post">
-                <div class="row">
-
-                    <div id="customer-name" class="col-lg-4 col-md-4 col-sm-12">
-                        <input placeholder="Họ và tên (bắt buộc)" type="text" name="name" class="form-control" required>
-                    </div>
-                    <div id="customer-phone" class="col-lg-4 col-md-4 col-sm-12">
-                        <input placeholder="Số điện thoại (bắt buộc)" type="text" name="phone" class="form-control" required>
-                    </div>
-                    <div id="customer-mail" class="col-lg-4 col-md-4 col-sm-12">
-                        <input placeholder="Email (bắt buộc)" type="text" name="mail" class="form-control" required>
-                    </div>
-                    <div id="customer-add" class="col-lg-12 col-md-12 col-sm-12">
-                        <input placeholder="Địa chỉ nhà riêng hoặc cơ quan (bắt buộc)" type="text" name="add" class="form-control" required>
-                    </div>
-
-                </div>
-            </form>
             <div class="row">
                 <div class="by-now col-lg-6 col-md-6 col-sm-12">
-                    <a href="#">
-                        <b>Mua ngay</b>
-                        <span>Giao hàng tận nơi siêu tốc</span>
+                    <a href="index.php">
+                        <b>Tiếp tục mua hàng</b>
                     </a>
                 </div>
                 <div class="by-now col-lg-6 col-md-6 col-sm-12">
-                    <a href="#">
-                        <b>Trả góp Online</b>
-                        <span>Vui lòng call (+84) 918.398.233</span>
+                    <a href="index.php?redirect=payment">
+                        <b>Thanh toán</b>
                     </a>
                 </div>
             </div>
-        </div>
+        
     </div>
 
     <footer>
