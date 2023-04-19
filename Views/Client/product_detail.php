@@ -40,7 +40,7 @@
                         </div>
                         
                         <button id="add-cart" class="button1">
-                            <a id="insert-prd" href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a>
+                            <a style="text-decoration:none; color:white;" href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a>
                         </button>
                     </div>
                     <div class="detail " style="padding: 30px; ">

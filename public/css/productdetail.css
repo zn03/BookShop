@@ -70,6 +70,7 @@ header-body {
     text-align: center;
     cursor: pointer;
     margin-top: 10px;
+    outline: none;
 }
 
 * {
@@ -250,9 +251,4 @@ details.comment:not([open]) .comment-heading::after {
     details.comment:not([open]) .comment-heading::after {
         content: " ";
     }
-}
-
-#insert-prd {
-    text-decoration: none;
-    color: white;
 }
