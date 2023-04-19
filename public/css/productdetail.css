@@ -251,3 +251,8 @@ details.comment:not([open]) .comment-heading::after {
         content: " ";
     }
 }
+
+#insert-prd {
+    text-decoration: none;
+    color: white;
+}

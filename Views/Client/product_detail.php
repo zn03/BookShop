@@ -1,8 +1,4 @@
 <link rel="stylesheet" href="public/css/productdetail.css">
-<style>
-    /* comment style */
-
-</style>
  
     <div class="body">
         <div class="product-item">
@@ -44,7 +40,7 @@
                         </div>
                         
                         <button id="add-cart" class="button1">
-                            <a style="text-decoration:none; color:white;" href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a>
+                            <a id="insert-prd" href="index.php?redirect=cart&action=add&id=<?= $item['product_id'] ?>">Thêm vào giỏ hàng</a>
                         </button>
                     </div>
                     <div class="detail " style="padding: 30px; ">
