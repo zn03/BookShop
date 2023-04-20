@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="public/css/index.css">
        <div class="body">
             <div class="container-fluid">
                 <div id="carouselExampleControls" class="carousel slide mb-4" data-bs-ride="carousel">

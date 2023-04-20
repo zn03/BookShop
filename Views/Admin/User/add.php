@@ -81,6 +81,11 @@
                 </div>
                 <div class="container">
                     <form method="post" enctype="multipart/form-data" action="index.php?controller=admin&redirect=user&action=store">
+                        <?php
+                            if(isset($errorr)){
+                                echo $errorr;
+                            }
+                        ?>
                         <div>
                             <label for="fullname" class="form-label">Tên người dùng</label>
                             <input type="text" class="form-control" id="fullname" name="fullname" >
@@ -111,7 +116,8 @@
                         </div>                           
                         <button type="submit" class="btn btn-primary">Thêm Vào</button>
                         <button type="reset" class="btn btn-primary">Reset</button>
-
+                        
+                        
                     </form>
                 </div>
             </div>

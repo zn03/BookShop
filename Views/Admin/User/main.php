@@ -90,7 +90,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col ">#</th>
+                                            <th scope="col ">ID</th>
                                             <th data-field="name" data-sortable="true" scope="col ">Tên</th>
                                             <th scope="col ">Tên người dùng</th>
                                             <th scope="col ">Email</th>

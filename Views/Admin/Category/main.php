@@ -90,7 +90,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col ">#</th>
+                                            <th scope="col ">ID</th>
                                             <th data-field="name" data-sortable="true" scope="col ">Tên danh mục</th>
                                             <th scope="col" colspan="2">Hành Động</th>
                                         </tr>

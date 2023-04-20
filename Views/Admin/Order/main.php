@@ -73,7 +73,7 @@
                 </ul>
             </div>
 
-            <div class="page-wrapper col-sm-10 col-lg-6 sidebar">
+            <div class="page-wrapper col-sm-10 col-lg-10 sidebar">
                 <div class="container-fluid">
                     <div class="row">
                         <h1 class="page-header">Quản Lý Đơn Hàng</h1>
@@ -89,9 +89,8 @@
                                             <th scope="col ">ID</th>
                                             <th data-field="name" data-sortable="true" scope="col ">Tên khách hàng</th>
                                             <th scope="col ">Số điện thoại</th>
-                                            <th scope="col ">Email</th>
                                             <th scope="col ">Địa chỉ</th>
-                                            <th scope="col ">Trạng thái đơn hàng </th>
+                                            <th scope="col ">Trạng thái</th>
                                             <th scope="col "> Ngày đặt </th>
                                             <th scope="col "> Tổng tiền </th>
                                             <th scope="col "> Tùy chọn </th>
@@ -106,12 +105,11 @@
                                                 <th scope="row"><?= $stt?></th>
                                                 <td><?= $item['customer_name']?></td>
                                                 <td><?= $item['customer_phone']?></td>
-                                                <td><?= $item['customer_email']?></td>
                                                 <td><?= $item['customer_address']?></td>
                                                 <td><?= $item['order_status']?></td>
                                                 <td><?= $item['order_date']?></td>
                                                 <td><?= $item['total_price']?></td>
-                                                <td><a href="index.php?controller=admin&redirect=order_detail&id=<?= $item['order_id'] ?>" class="btn btn-info">Chi tiết</a></td>
+                                                <td><a href="index.php?controller=admin&redirect=order&action=view&id=<?= $item['order_id'] ?>" class="btn btn-info">Chi tiết</a></td>
                                                 
                                             </tr>
                                             <?php

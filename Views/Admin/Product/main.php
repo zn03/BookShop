@@ -91,7 +91,7 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
+                                            <th scope="col">ID</th>
                                             <th scope="col">Tên Sản Phẩm</th>
                                             <th scope="col">Thể loại</th>
                                             <th scope="col">Giá Tiền</th>
@@ -131,7 +131,7 @@
                                                 }else{
                                                     echo "<td> Không Nổi Bật</td>";
                                                  }
-                                            ?>
+                                                ?>
 
                                                     <td><img width="100x" src="public/product_image/<?= $item['product_image']?>"></td>
                                                     <td><a href="index.php?controller=admin&redirect=product&action=edit&id=<?= $item['product_id'];?>" class="btn btn-info">Edit</a></td>

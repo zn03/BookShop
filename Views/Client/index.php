@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/">       
     <link rel="stylesheet" href="public/css/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/about.css">
+    <link rel="stylesheet" href="public/css/contact.css">
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/product.css">
+    <link rel="stylesheet" href="public/css/product_detail.css">
+
     
     <style>
         @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
@@ -43,7 +49,7 @@
         background-color: greenyellow;
     }
     body {
-    background-image: url(public/image/bg_pattern.jpg);
+    /* background-image: url(public/image/bg_pattern.jpg); */
     scroll-behavior: smooth;
     grid-template-columns: auto 0px;
     }
@@ -126,10 +132,7 @@
                     break;
                 case 'product' :
                     include_once('Views/Client/product.php');    
-                    break;
-                case 'payment' :
-                    include_once('Views/Client/payment.php');
-                    break;    
+                    break; 
             }
         } else{
             include_once('Views/Client/dashboard.php');

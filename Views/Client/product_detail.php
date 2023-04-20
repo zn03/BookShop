@@ -1,5 +1,270 @@
-<link rel="stylesheet" href="public/css/productdetail.css">
- 
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+
+/* Animation webkit */
+
+@-webkit-keyframes myfirst {
+    0% {
+        margin-left: -235px
+    }
+    90% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+
+/* Animation */
+
+@keyframes myfirst {
+    0% {
+        margin-left: -235px
+    }
+    70% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+header-body {
+    height: 160px;
+    background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
+}
+
+.formgroup,
+.formgroup-active,
+.formgroup-error {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 10.5%;
+    transition: background-image 0.7s;
+    -webkit-transition: background-image 0.7s;
+    -moz-transition: background-image 0.7s;
+    -o-transition: background-image 0.7s;
+    width: 566px;
+    padding-top: 2px;
+}
+
+.formgroup {
+    background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');
+}
+
+.formgroup-active {
+    background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
+}
+
+.formgroup-error {
+    background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
+    color: red;
+}
+
+.button1 {
+    background-color: white;
+    border: 2px solid green;
+    padding: 15px 32px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#insert-prd {
+    text-decoration: none;
+    color: green;
+}
+
+.button1:hover {
+    transform: scale(110%);
+    background-color: green;
+}
+
+.button1:hover #insert-prd {
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #f9f9f9;
+}
+
+.comment-btn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    padding: 4px 8px;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.comment-btn:hover,
+.comment-btn:focus,
+.comment-btn:active {
+    cursor: pointer;
+    background-color: #ecf0f1;
+}
+
+.comment-thread {
+    width: 1100px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 30px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    /* Removes margin collapse */
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+/* Comment */
+
+.comment {
+    position: relative;
+    margin: 20px auto;
+}
+
+.comment-heading {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+}
+
+.comment-voting {
+    width: 20px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.comment-voting button {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    border: 0;
+    font-size: 10px;
+}
+
+.comment-info {
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+}
+
+.comment-author {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.comment-author:hover {
+    text-decoration: underline;
+}
+
+.replies {
+    margin-left: 20px;
+}
+
+
+/* Adjustments for the comment border links */
+
+.comment-border-link {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 12px;
+    height: calc(100% - 50px);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+}
+
+.comment-border-link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.comment-body {
+    padding: 0 20px;
+    padding-left: 28px;
+}
+
+.replies {
+    margin-left: 28px;
+}
+
+
+/* Adjustments for toggleable comments */
+
+details.comment summary {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+
+details.comment summary::-webkit-details-marker {
+    display: none;
+}
+
+details.comment:not([open]) .comment-heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comment-heading::after {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    align-self: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+details.comment[open] .comment-heading::after {
+    content: "Nhấn để ẩn";
+}
+
+details.comment:not([open]) .comment-heading::after {
+    content: "Nhấn để mở";
+}
+
+
+/* Adjustment for Internet Explorer */
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    /* Resets cursor, and removes prompt text on Internet Explorer */
+    .comment-heading {
+        cursor: default;
+    }
+    details.comment[open] .comment-heading::after,
+    details.comment:not([open]) .comment-heading::after {
+        content: " ";
+    }
+} </style>
     <div class="body">
         <div class="product-item">
             <div class="card mb-3" style="max-width: 150ch; margin: auto;max-height: 600ch;">
