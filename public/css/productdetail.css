@@ -79,6 +79,7 @@ header-body {
 .button1:hover {
     transform: scale(110%);
     background-color: green;
+    transition: 0.5s;
 }
 
 .button1:hover #insert-prd {
